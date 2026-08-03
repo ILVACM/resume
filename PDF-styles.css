@@ -1,0 +1,40 @@
+/* =========================================
+   Markdown PDF 自定义字体样式 (Windows 11)
+   ========================================= */
+
+/* 1. 全局基础设置 (正文)
+   优先级：Times New Roman (数字/字母) -> 仿宋 (中文) */
+body, p, li, blockquote, td, th, dt, dd {
+    font-family: "Times New Roman", "FangSong", "仿宋", serif !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. 标题设置
+   优先级：Times New Roman (数字/字母) -> 楷体 (中文) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", "KaiTi", "楷体", serif !important;
+    font-weight: bold !important; /* 保持标题加粗 */
+}
+
+/* 3. 表格表头特殊处理
+   表头通常包含在 th 标签中，如果你希望表头也用楷体，可以取消下面的注释 */
+/* 
+th {
+    font-family: "Times New Roman", "KaiTi", "楷体", serif !important;
+    font-weight: bold !important;
+} 
+*/
+
+/* 4. 代码块与行内代码 (⚠️ 特别说明见下方)
+   代码通常需要等宽字体对齐。这里设置为：数字/字母使用 Consolas，中文使用仿宋。
+   如果你强行要求代码里的英文也用 Times New Roman，请将下面的 Consolas 替换为 Times New Roman */
+code, pre, kbd, samp {
+    font-family: "Consolas", "FangSong", "仿宋", monospace !important;
+}
+
+/* 5. 修复行内代码的背景和边距 (可选，让排版更美观) */
+code {
+    padding: 0.2em 0.4em !important;
+    margin: 0 !important;
+    font-size: 90% !important;
+}
