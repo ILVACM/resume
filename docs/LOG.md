@@ -6,3 +6,4 @@
 |---|---|---|---|---|
 | 2026-09-05 21:35 | 人工 | 重命名 `资料/` 为 `docs/`，删除根目录 `PDF-styles.css` | docs/、PDF-styles.css | md2html.py 对后者有优雅降级，构建链路不受影响 |
 | 2026-09-05 21:35 | Agent | 目录重整收尾：git 层面确认 rename；`scripts/` 移入 `_temp/scripts/` 并修正构建脚本路径；创建本日志 | docs/、_temp/scripts/、AGENTS.md、README.md、Projects-Index.md、.gitignore | 按 AGENTS.md 目录职责规定执行 |
+| 2026-09-05 21:50 | Agent | 目录职责重整落地：AGENTS.md「其他目录」改为目录职责表格、新增 §3.4 操作日志与 §6 图表规范、删除 §7 版本记录、ASCII 图改 mermaid、全文 `资料/`→`docs/`、`scripts/`→`_temp/scripts/`；README.md、Projects-Index.md、.gitignore 同步 | AGENTS.md、README.md、Projects-Index.md、.gitignore | 方案经人工确认（选 a：scripts 不入库）；AGENTS.md 字符数 4321 < 8000 |
