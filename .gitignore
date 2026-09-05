@@ -9,7 +9,10 @@ _output/*
 !.gitkeep
 
 # ===== 工作区中间产物 =====
-_temp/
+# _temp 整体忽略，但构建脚本 _temp/scripts/ 例外入库（防人工清空后丢失，git 可恢复）
+# 注意必须写 _temp/* 而非 _temp/ —— 后者会忽略整个目录，导致否定规则失效
+_temp/*
+!_temp/scripts/
 _backup/
 .edge-profile/
 
