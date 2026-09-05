@@ -10,7 +10,7 @@
 |---|---|---|
 | `Resume.md` | 母版（唯一事实来源） | 含 7 段完整经历；只读，不直接投递 |
 | `Resume-Lite.md` | 只读模板（骨架精简版） | 严禁直接修改；定制时先复制再重命名 |
-| `Projects-Index.md` | 成果索引表 | 登记项目性质/时间/资料路径，由 IndexAgent 维护 |
+| `docs/INDEX.md` | 统一索引台账 | 项目成果、子版本简历实例（仅 md）、投递 tag 台账三合一，由 IndexAgent 维护 |
 
 派生关系：**母版 Resume.md 派生出模板 Resume-Lite.md，模板复制后派生出投递件 Resume-{目标}.md。**
 
@@ -28,7 +28,7 @@ graph LR
 
 | 目录 | 职责 | Git 策略 |
 |---|---|---|
-| `docs/` | 原始证明材料，按 `横向/纵向/实习/{序号}-{项目简称}/` 分类。**不删、不改、不重命名**，丢失不可再生；根目录下的 `LOG.md` 为操作日志（见 §3.4）。 | 全部入库 |
+| `docs/` | 原始证明材料，按 `横向/纵向/实习/{序号}-{项目简称}/` 分类。**不删、不改、不重命名**，丢失不可再生；`LOG.md` 操作日志位于本目录根（见 §3.4）。 | 全部入库 |
 | `_output/` | **唯一结果输出目录**，存放生成的 PDF 投递件等成品。 | 忽略内容，保留 `.gitkeep` |
 | `_temp/` | 所有中间临时产物与环境依赖，含 `scripts/`（构建脚本）。 | 整体忽略 |
 | 根目录 PDF | 已有的 `Resume.pdf`、`Resume-Lite.pdf`、`广工23软工黄泊凯-v3.pdf` 原地不动。 | 仅忽略（规则 `/*.pdf`） |
@@ -49,7 +49,7 @@ graph LR
 ### 3.1 新增项目
 
 1. 在 `docs/` 对应分类下建立 `docs/{横向|纵向|实习}/{序号}-{项目简称}/` 目录，归档原始材料。
-2. 在 `Projects-Index.md` 索引表登记该项目性质、起止时间、资料路径（**索引先行**）。
+2. 在 `docs/INDEX.md` §1 登记该项目性质、起止时间、资料路径（**索引先行**）。
 3. 依据索引条目，更新母版 `Resume.md` 对应章节的完整经历描述。
 4. 评估项目分量：若属核心成果，同步 Lite 版骨架（同步的是**结构**，非全部内容）。
 5. 按第 4 节规范提交 commit。
@@ -59,8 +59,8 @@ graph LR
 1. **复制** `Resume-Lite.md`，重命名为 `Resume-{目标}.md`（如 `Resume-ByteDance.md`）。禁止直接改动模板。
 2. 打开新文件，基于母版 `Resume.md` 的内容替换骨架条目，按目标岗位裁剪详略。
 3. 用 `_temp/scripts/build-pdf.sh` 生成 PDF，输出至 `_output/`（如 `_output/Resume-ByteDance.pdf`）。
-4. 提交生成件：`build(resume): 生成 ByteDance 投递版 PDF`。
-5. **投递前必打 tag**：`git tag v{版本}-{目标}-{YYYYMMDD}`，使"哪版投了哪家"永久可追溯。
+4. 在 `docs/INDEX.md` §2 登记该实例（只记 md 源文件，PDF 产物不入账），提交 `build(resume): 生成 ByteDance 投递版 PDF`。
+5. **投递前必打 tag**：`git tag v{版本}-{目标}-{YYYYMMDD}`，并在 `docs/INDEX.md` §3 台账登记（格式与细则见该节）。
 
 ### 3.3 母版更新后的同步
 
@@ -86,22 +86,14 @@ type(scope): subject
 |---|---|---|
 | `docs` | 简历正文内容改动 | `docs(resume): 补充省自然科学基金课题的算法职责描述` |
 | `data` | `docs/` 原始材料增删 | `data(横向): 归档南方电网 RPA 项目验收报告扫描件` |
-| `index` | `Projects-Index.md` 索引表 | `index: 新增机场物流二期项目条目及资料路径` |
+| `index` | `docs/INDEX.md` 索引台账 | `index: 新增机场物流二期项目条目及资料路径` |
 | `rule` | 规则文档与配置 | `rule: 建立 AGENTS.md 协作规则与 .gitignore 策略` |
 | `build` | 生成 PDF 产物 | `build(resume): 生成 v1.1 ByteDance 投递版 PDF` |
 | `chore` | 其他杂项 | `chore: 清理 _output 下过期投递件` |
 
 ### 4.2 Tag 规范
 
-| 类型 | 格式 | 示例 |
-|---|---|---|
-| 基线 | `v{版本}-base` | `v1.0-base` |
-| 投递快照 | `v{版本}-{目标}-{YYYYMMDD}` | `v1.1-ByteDance-20260905` |
-
-- 母版达到稳定状态时打基线 tag；每次实际投递前**必须**打投递快照 tag。
-- 版本号：结构或重大内容变更递增次版本（`v1.0` → `v1.1`），仅错字润色沿用当前版本。
-- 同一目标多次投递，日期不同即新建 tag，不覆盖旧 tag。
-- Tag 推送后不删除、不改名，保证"哪版投了哪家"可永久追溯。
+Tag 是"哪版投了哪家"的追溯机制：每次实际投递前**必须**打投递快照 tag 并在台账登记；格式定义、版本号细则与台账见 [`docs/INDEX.md`](docs/INDEX.md) §3。
 
 ### 4.3 默认提交义务
 
@@ -118,7 +110,7 @@ type(scope): subject
 | 角色 | 职责 | 输出物 |
 |---|---|---|
 | ScanAgent | 扫描 `docs/` 与仓库现状，识别新增/变更材料 | 扫描报告、待办清单 |
-| IndexAgent | 构建与维护 `Projects-Index.md` 成果索引 | `Projects-Index.md` |
+| IndexAgent | 构建与维护 `docs/INDEX.md` 索引台账 | `docs/INDEX.md` |
 | DocAgent | 文档工程：规则、模板、README、产出流程 | `AGENTS.md`、`README.md` |
 | EditAgent | 母版与 Lite 版的编辑、校对、润色 | `Resume.md`、`Resume-Lite.md` |
 | AuditAgent | 整合审计：一致性校验、索引与正文对账 | 审计报告、修正建议 |
@@ -132,4 +124,4 @@ type(scope): subject
 - 文档内文件路径分隔符统一用 `/`，不使用反斜杠。
 - 流程、派生关系等图表优先用 mermaid 或 markdown 表格表达，不使用 ASCII 字符画。
 - 文件统一 UTF-8 无 BOM 编码。
-- 本文件是 WorkBuddy 项目上下文注入文件，**总字符数须控制在 8000 以内**，增补时保持精简。
+- 本文件是 `所有本地agent软件（Trae\ WorkBuddy\ 等）` 项目上下文注入文件，**总字符数须控制在 8000 以内**，增补时保持精简。
