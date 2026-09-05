@@ -1,5 +1,5 @@
 {
     "markdown-pdf.styles": [
-        "./PDF-styles.css"
-    ]
+        "./.vscode/PDF-styles.css"
+        ]
 }
