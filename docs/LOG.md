@@ -12,4 +12,5 @@
 | 2026-09-06 00:03 | Agent | 规则变更：构建脚本 `_temp/scripts/` 纳入版本控制（此前选 a 不入库，人工反悔）——.gitignore 改 `_temp/*` + `!_temp/scripts/`，AGENTS.md 目录职责表同步；`_temp/` 下其余内容（build/、xlsx 汇总表）继续忽略 | .gitignore、_temp/scripts/、AGENTS.md | 26KB 纯文本，防 _temp 人工清空后丢失 |
 | 2026-09-06 14:22 | 人工+Agent | 确认 `_output/` 为所有 PDF 产物唯一输出目录（此前根目录 3 份 PDF 已迁入）；明确 `docs/其他补充描述/` 为招聘网站填报用额外描述素材目录（简历正文无对应模块）；同步修订 AGENTS.md §1 目录职责表 | AGENTS.md、docs/其他补充描述/、_output/ | 用户补充确认；删除「根目录 PDF 原地不动」过时条款，`/*.pdf` 规则改为防御性保留 |
 | 2026-09-06 14:38 | Agent | 归档广东交科项目精选证明材料 21 文件 / 3.0MB：项目文档 5（README/知识库索引/系统总览/设计文档×2）+ 快速上手 2 + 硬件手册 2 + 实测记录 3 组（分割掩码/标注图/直径与间距 CSV）+ 测试日志 3；源代码未入库，仍留 `_temp/v1` | docs/横向/广东交科/、docs/INDEX.md | 来源 `_temp/v1`（无 .git，原仓库 `D:\CPS-GJT_20260320\v1`）；仅证明材料精选（用户定夺）；INDEX §1 对应条目同步补齐路径 |
+| 2026-09-06 20:55 | Agent | 新增 `docs/TargetCompanies.md` 投递目标清单（67 家：冲 19 / 中 0 / 稳 6 / 保 4 / 尝试 38，零依赖脚本解析自 xlsx）；AGENTS.md §1 文件职责表登记 + §3.2 投递流程引用 | docs/TargetCompanies.md、AGENTS.md、_temp/2027秋招公司汇总.xlsx | 用户定夺 md 为唯一事实来源，源 xlsx 草稿废弃于 _temp 不再维护、不删除；基线报告游离文件跟踪项 #7 完全闭环 |
 

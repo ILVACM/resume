@@ -11,6 +11,7 @@
 | `Resume.md` | 母版（唯一事实来源） | 含 7 段完整经历；只读，不直接投递 |
 | `Resume-Lite.md` | 只读模板（骨架精简版） | 严禁直接修改；定制时先复制再重命名 |
 | `docs/INDEX.md` | 统一索引台账 | 项目成果、子版本简历实例（仅 md）、投递 tag 台账三合一，由 IndexAgent 维护 |
+| `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；投递动作联动 `docs/INDEX.md` §3 tag 台账 |
 
 ```mermaid
 graph LR
@@ -52,7 +53,7 @@ graph LR
 
 ### 3.2 定制投递版简历
 
-1. **复制** `Resume-Lite.md`，重命名为 `Resume-{目标}.md`（如 `Resume-ByteDance.md`）。禁止直接改动模板。
+1. **复制** `Resume-Lite.md`，重命名为 `Resume-{目标}.md`（如 `Resume-ByteDance.md`）。禁止直接改动模板。目标选取参照 `docs/TargetCompanies.md`。
 2. 打开新文件，基于母版 `Resume.md` 的内容替换骨架条目，按目标岗位裁剪详略。
 3. 用 `_temp/scripts/build-pdf.sh` 生成 PDF，输出至 `_output/`（如 `_output/Resume-ByteDance.pdf`）。
 4. 在 `docs/INDEX.md` §2 登记该实例（只记 md 源文件，PDF 产物不入账），提交 `build(resume): 生成 ByteDance 投递版 PDF`。
