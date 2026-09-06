@@ -10,4 +10,5 @@
 | 2026-09-05 22:53 | Agent | 重命名 Projects-Index.md → docs/INDEX.md，扩展为统一索引台账（§1 项目成果 / §2 子版本简历实例仅记 md / §3 投递 tag 台账，迁入原 AGENTS.md §4.2）；AGENTS.md 引用路径与 Tag 规范指向同步 | docs/INDEX.md、AGENTS.md | 用户指令：PDF 产物不入账；README.md 已被人工删除，不在本轮范围 |
 | 2026-09-05 23:59 | Agent | 精简 AGENTS.md：删派生关系文字行（mermaid 已表达）、三层说明压缩为一句核心约束、删 §5「索引先行」「只读敬畏」重复条、写权限隔离收短、删 §3.1 第 5 步（§4.3 已覆盖）、gitignore 说明压缩、清理 DocAgent 过时 README 引用 | AGENTS.md | 用户批准 A 级方案；4219→3918 字符，零语义损失 |
 | 2026-09-06 00:03 | Agent | 规则变更：构建脚本 `_temp/scripts/` 纳入版本控制（此前选 a 不入库，人工反悔）——.gitignore 改 `_temp/*` + `!_temp/scripts/`，AGENTS.md 目录职责表同步；`_temp/` 下其余内容（build/、xlsx 汇总表）继续忽略 | .gitignore、_temp/scripts/、AGENTS.md | 26KB 纯文本，防 _temp 人工清空后丢失 |
+| 2026-09-06 14:22 | 人工+Agent | 确认 `_output/` 为所有 PDF 产物唯一输出目录（此前根目录 3 份 PDF 已迁入）；明确 `docs/其他补充描述/` 为招聘网站填报用额外描述素材目录（简历正文无对应模块）；同步修订 AGENTS.md §1 目录职责表 | AGENTS.md、docs/其他补充描述/、_output/ | 用户补充确认；删除「根目录 PDF 原地不动」过时条款，`/*.pdf` 规则改为防御性保留 |
 
