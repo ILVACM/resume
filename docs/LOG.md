@@ -16,4 +16,5 @@
 | 2026-09-06 21:20 | Agent | `TargetCompanies.md` 结构重组：主分组由策略档位改为公司性质（8 组：AI 10 / 物联网 9 / 互联网 4 / 汽车 3 / 企业服务 7 / 工业软件 3 / 政企 4 / 金融 27）；策略降为属性列；删除所在地域列 | docs/TargetCompanies.md | 用户指令；脚本重组带自校验（67 家集合一致、字段保真），数据零丢失 |
 | 2026-09-06 22:25 | Agent | `TargetCompanies.md` 分组微调：具身智能（优必选）、机器视觉（奥比中光）自 AI / 大模型组拆出独立成组，AI 组 10→8，总 10 组 67 家不变 | docs/TargetCompanies.md | 用户指令；小改动 commit 追溯 + 本行登记 |
 | 2026-09-06 22:30 | Agent | `TargetCompanies.md` 分组微调：智能汽车组（比亚迪/小鹏/广汽 3 家）并入物联网 / 智能硬件组（9→12），总 9 组 67 家不变 | docs/TargetCompanies.md | 用户指令；警示备注保真 |
+| 2026-09-06 22:31 | Agent | `TargetCompanies.md` 分组重命名：`工业软件 / GIS / 智慧城市` → `领域专用软件开发`（3 家成员不变） | docs/TargetCompanies.md | 用户指令 |
 
