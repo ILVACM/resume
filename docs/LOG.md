@@ -15,4 +15,5 @@
 | 2026-09-06 20:55 | Agent | 新增 `docs/TargetCompanies.md` 投递目标清单（67 家：冲 19 / 中 0 / 稳 6 / 保 4 / 尝试 38，零依赖脚本解析自 xlsx）；AGENTS.md §1 文件职责表登记 + §3.2 投递流程引用 | docs/TargetCompanies.md、AGENTS.md、_temp/2027秋招公司汇总.xlsx | 用户定夺 md 为唯一事实来源，源 xlsx 草稿废弃于 _temp 不再维护、不删除；基线报告游离文件跟踪项 #7 完全闭环 |
 | 2026-09-06 21:20 | Agent | `TargetCompanies.md` 结构重组：主分组由策略档位改为公司性质（8 组：AI 10 / 物联网 9 / 互联网 4 / 汽车 3 / 企业服务 7 / 工业软件 3 / 政企 4 / 金融 27）；策略降为属性列；删除所在地域列 | docs/TargetCompanies.md | 用户指令；脚本重组带自校验（67 家集合一致、字段保真），数据零丢失 |
 | 2026-09-06 22:25 | Agent | `TargetCompanies.md` 分组微调：具身智能（优必选）、机器视觉（奥比中光）自 AI / 大模型组拆出独立成组，AI 组 10→8，总 10 组 67 家不变 | docs/TargetCompanies.md | 用户指令；小改动 commit 追溯 + 本行登记 |
+| 2026-09-06 22:30 | Agent | `TargetCompanies.md` 分组微调：智能汽车组（比亚迪/小鹏/广汽 3 家）并入物联网 / 智能硬件组（9→12），总 9 组 67 家不变 | docs/TargetCompanies.md | 用户指令；警示备注保真 |
 
