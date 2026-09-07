@@ -27,17 +27,19 @@
 
 ## 2. 子版本简历实例台账
 
-从母版 `Resume.md` 或模板 `Resume-Lite.md` 复制定制的**全部实例**（`Resume-{目标}.md`）。**只登记 markdown 源文件**；由实例构建的 PDF 产物不入账——PDF 可随时从 md 重建，版本追溯由 tag 承担（规范与台账见 [`TargetCompanies.md`](TargetCompanies.md)）。定制流程见 [`strategy.md`](strategy.md)。
+从母版 `Resume.md` 或模板 `Resume-Lite.md` 复制定制的**全部实例**（`Resume-{目标}.md`）。**只登记 markdown 源文件**；  
+由实例构建的 PDF 产物不入账——PDF 可随时从 md 重建，版本追溯由 tag 承担（规范与台账见 [`TargetCompanies.md`](TargetCompanies.md)）。  
+定制流程见 [`strategy.md`](strategy.md)。  
 
 | 文件 | 源文件 | 定制目标 | 登记日期 | 状态 | 对应 tag | 备注 |
 |---|---|---|---|---|---|---|
 | _（暂无实例；每定制一份立即登记一行）_ | | | | | | |
 
-状态取值：`在役`（当前可投）/ `归档`（内容过期，文件保留）。
+状态取值：`active`（当前可投）/ `archive`（内容过期，文件保留）。
 
 ## 维护说明
 
-- 新项目先归档资料到 `docs/{横向|纵向|实习}/{序号}-{项目简称}/`，再在 §1 登记，最后更新母版 `Resume.md`（索引先行原则，详见 [`AGENTS.md`](../AGENTS.md) §3.1）。
+- 新项目先归档资料到 `docs/{横向|纵向|实习|竞赛}/{序号}-{项目简称}/`，再在 §1 登记，最后更新母版 `Resume.md`（索引先行原则，详见 [`AGENTS.md`](../AGENTS.md) §3.1）。
 - §1「相关领域」用语与 [`TargetCompanies.md`](TargetCompanies.md) 的公司性质分组**保持一致**（按关联度降序、1~3 个），设计简历编写策略时以此为键检索匹配。
 - §1 条目应与 `Resume.md` 保持一致，增删时同步两处。
 - 资料索引为"待补充"的条目，补齐路径后请同步更新本表并删除"待补充资料路径"备注。
