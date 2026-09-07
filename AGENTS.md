@@ -58,7 +58,9 @@
 
 ### 3.2 投递简历编写
 
-简历**实例**（非母版）的定制流程统一见 [`docs/strategy.md`](docs/strategy.md)；实例登记落 `docs/INDEX.md` §2；投递 tag 规范见 `docs/tag.md`，台账与投递日志见 `docs/TargetCompanies.md`（母版操作走 §3.1）。
+简历**实例**（非母版）的定制流程统一见 [`docs/strategy.md`](docs/strategy.md)；  
+实例登记落 `docs/INDEX.md` §2；  
+投递 tag 规范见 `docs/tag.md`，台账与投递日志见 `docs/TargetCompanies.md`（母版操作走 §3.1）。
 
 ### 3.3 日志记录
 
