@@ -13,6 +13,7 @@
 | `docs/INDEX.md` | 统一索引台账 | §1 项目成果索引（相关领域对齐 TargetCompanies 分组）+ §2 子版本简历实例台账，由 IndexAgent 维护 |
 | `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；含投递 tag 规范与台账 |
 | `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程的唯一权威文档；实例登记落 INDEX §2、tag 落 TargetCompanies 台账 |
+| `docs/LOG.md` | 操作日志 | 重大操作（重命名/移动/删除/目录调整/批量修改）须登记：日期时间、操作者、操作、涉及路径、备注，人工与 Agent 均适用（细则见 §3.4） |
 
 ```mermaid
 graph LR
