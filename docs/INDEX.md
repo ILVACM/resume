@@ -27,13 +27,14 @@
 
 ## 2. 子版本简历实例台账
 
-从母版 `Resume.md` 或模板 `Resume-Lite.md` 复制定制的**全部实例**（`Resume-{目标}.md`）。**只登记 markdown 源文件**；  
-由实例构建的 PDF 产物不入账——PDF 可随时从 md 重建，版本追溯由 tag 承担（规范与台账见 [`TargetCompanies.md`](TargetCompanies.md)）。  
-定制流程见 [`strategy.md`](strategy.md)。  
+从母版 `Resume.md` 或模板 `Resume-Lite.md` 复制定制的**全部实例**（`Resume-{目标}.md`）。  
+**只登记 markdown 源文件**；由实例构建的 PDF 产物不入账——PDF 可随时从 md 重建，版本追溯由 tag 承担（规范与台账见 [`TargetCompanies.md`](TargetCompanies.md)）。  
+「目标指向」为该实例的定制方向：可以是某一家具体公司，也可以是某一类公司或分组（参照 [`TargetCompanies.md`](TargetCompanies.md) 分组）。  
+定制流程见 [`strategy.md`](strategy.md)。    
 
-| 文件 | 源文件 | 定制目标 | 登记日期 | 状态 | 对应 tag | 备注 |
-|---|---|---|---|---|---|---|
-| _（暂无实例；每定制一份立即登记一行）_ | | | | | | |
+| 文件 | 登记日期 | 目标指向 | 状态 | 对应 tag |
+|---|---|---|---|---|
+| _（暂无实例；每定制一份立即登记一行）_ | | | | |
 
 状态取值：`active`（当前可投）/ `archive`（内容过期，文件保留）。
 
