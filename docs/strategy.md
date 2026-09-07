@@ -1,7 +1,7 @@
 # strategy.md — 简历编写与投递策略
 
 > **定位**：简历**实例**（`Resume-{目标}.md`，区别于母版 `Resume.md`）的定制操作流程唯一权威文档。
-> **分工**：母版维护走 `AGENTS.md` §3.1；实例登记见 [`INDEX.md`](INDEX.md) §2；投递 tag 规范与台账见 [`TargetCompanies.md`](TargetCompanies.md)。
+> **分工**：母版维护走 `AGENTS.md` §3.1；实例登记见 [`INDEX.md`](INDEX.md) §2；投递 tag 规范见 [`tag.md`](tag.md)，日志见 [`TargetCompanies.md`](TargetCompanies.md)。
 
 ## 1. 定制投递流程（实例全流程）
 

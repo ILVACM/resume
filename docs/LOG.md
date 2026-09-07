@@ -20,3 +20,4 @@
 | 2026-09-07 19:42 | Agent | 分工重构：简历实例（非母版）操作流程与实例/tag 台账从 AGENTS.md §3.2、INDEX.md §2/§3 统一迁入 `docs/strategy.md`（流程 6 步 + §2 实例台账 + §3 tag 规范台账）；AGENTS.md §3.2 改指针、§4.2/§1 引用同步；INDEX.md 回归项目成果索引单一职责 | AGENTS.md、docs/strategy.md、docs/INDEX.md | 用户指令「既是精简也是明确分工」；AGENTS.md 4,266→3,961 字符；strategy.md 由空占位转正 |
 | 2026-09-07 20:20 | Agent | 台账归位微调：§2 子版本简历实例台账迁回 `INDEX.md`（统一索引）；投递 tag 规范与台账迁入 `TargetCompanies.md` 文末（与目标公司同册）；strategy.md 回归纯流程文档（仅 §1 六步流程 + 维护说明）；AGENTS.md 职责表与 §3.2/§4.2 引用同步 | AGENTS.md、docs/strategy.md、docs/INDEX.md、docs/TargetCompanies.md | 用户指令；AGENTS.md 4,018 字符 |
 
+| 2026-09-07 21:58 | Agent | 投递 tag 规范独立为 `docs/tag.md`（快照封条类比/两种 tag/三条铁律/配合用法）；`TargetCompanies.md` 回归公司清单 + 投递状态跟踪 + 投递日志（原 tag 规范节删除，投递日志独立成节）；AGENTS.md/INDEX.md/strategy.md 引用同步 | AGENTS.md、docs/tag.md、docs/TargetCompanies.md、docs/INDEX.md、docs/strategy.md | 用户指令；最终格局：TargetCompanies=公司+状态+日志 / tag.md=tag 规范 / strategy=流程 / INDEX=成果+实例台账 |
