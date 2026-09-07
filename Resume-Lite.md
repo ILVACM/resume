@@ -8,7 +8,7 @@
 > 邮箱：<3347620766@qq.com>\
 > 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)
 >
-> **求职意向：** AI应用开发工程师 / 后端研发工程师 / 软件研发工程师（AI+系统集成方向）
+> **求职方向：** AI应用开发工程师 / 后端研发工程师 / 软件研发工程师（AI+系统集成方向）
 
 ### 教育&专业背景
 
