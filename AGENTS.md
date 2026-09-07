@@ -86,11 +86,7 @@ type(scope): subject
 | `build` | 生成 PDF 产物 | `build(resume): 生成 v1.1 ByteDance 投递版 PDF` |
 | `chore` | 其他杂项 | `chore: 清理 _output 下过期投递件` |
 
-### 4.2 Tag 规范
-
-Tag 是"哪版投了哪家"的追溯机制：每次实际投递前**必须**打投递快照 tag 并在台账登记；格式定义、版本号细则与台账见 [`docs/TargetCompanies.md`](docs/TargetCompanies.md)。
-
-### 4.3 默认提交义务
+### 4.2 默认提交义务
 
 - Agent 完成任何文件写入/修改后，**默认执行** `git add <本次改动文件>` + `git commit`，message 按 §4.1 规范自适应生成。
 - **提交边界**：只提交本次任务产生的改动；用户自己的未提交变更（历史遗留的 `M`/`D`）一律不碰、不代提交。
