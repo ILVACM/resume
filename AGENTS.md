@@ -11,8 +11,9 @@
 | `Resume.md` | 母版（唯一事实来源） | 含 7 段完整经历；只读，不直接投递 |
 | `Resume-Lite.md` | 只读模板（骨架精简版） | 严禁直接修改；定制时先复制再重命名 |
 | `docs/INDEX.md` | 统一索引台账 | §1 项目成果索引（相关领域对齐 TargetCompanies 分组）+ §2 子版本简历实例台账，由 IndexAgent 维护 |
-| `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；含投递 tag 规范与台账 |
-| `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程的唯一权威文档；实例登记落 INDEX §2、tag 落 TargetCompanies 台账 |
+| `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；含投递状态跟踪与投递日志 |
+| `docs/tag.md` | 投递 tag 规范 | tag 格式、铁律与用法的唯一权威文档；tag 台账与日志记录落 TargetCompanies |
+| `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程的唯一权威文档；实例登记落 INDEX §2 |
 | `docs/LOG.md` | 操作日志 | 重大操作（重命名/移动/删除/目录调整/批量修改）须登记：日期时间、操作者、操作、涉及路径、备注，人工与 Agent 均适用（细则见 §3.3） |
 
 ### 目录职责
@@ -57,7 +58,7 @@
 
 ### 3.2 投递简历编写
 
-简历**实例**（非母版）的定制流程统一见 [`docs/strategy.md`](docs/strategy.md)；实例登记落 `docs/INDEX.md` §2；投递 tag 规范与台账见 `docs/TargetCompanies.md`（母版操作走 §3.1）。
+简历**实例**（非母版）的定制流程统一见 [`docs/strategy.md`](docs/strategy.md)；实例登记落 `docs/INDEX.md` §2；投递 tag 规范见 `docs/tag.md`，台账与投递日志见 `docs/TargetCompanies.md`（母版操作走 §3.1）。
 
 ### 3.3 日志记录
 
