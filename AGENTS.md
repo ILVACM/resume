@@ -10,9 +10,9 @@
 |---|---|---|
 | `Resume.md` | 母版（唯一事实来源） | 含 7 段完整经历；只读，不直接投递 |
 | `Resume-Lite.md` | 只读模板（骨架精简版） | 严禁直接修改；定制时先复制再重命名 |
-| `docs/INDEX.md` | 统一索引台账 | 项目成果、子版本简历实例（仅 md）、投递 tag 台账三合一，由 IndexAgent 维护 |
-| `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；投递动作联动 `docs/INDEX.md` §3 tag 台账 |
-| `docs/strategy.md` | 简历编写投递策略 | 人工主导记录维护（当前为空占位）；Agent 可引用分析，改动须经用户确认 |
+| `docs/INDEX.md` | 项目成果索引（含相关领域标注） | 「相关领域」用语与 `docs/TargetCompanies.md` 分组对齐；由 IndexAgent 维护 |
+| `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；投递动作联动 `docs/strategy.md` §3 tag 台账 |
+| `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程、实例台账、tag 规范与台账的唯一权威文档 |
 
 ```mermaid
 graph LR
@@ -55,11 +55,7 @@ graph LR
 
 ### 3.2 定制投递版简历
 
-1. **复制** `Resume-Lite.md`，重命名为 `Resume-{目标}.md`（如 `Resume-ByteDance.md`）。禁止直接改动模板。目标选取参照 `docs/TargetCompanies.md`。
-2. 打开新文件，基于母版 `Resume.md` 的内容替换骨架条目，按目标岗位裁剪详略。
-3. 用 `_temp/scripts/build-pdf.sh` 生成 PDF，输出至 `_output/`（如 `_output/Resume-ByteDance.pdf`）。
-4. 在 `docs/INDEX.md` §2 登记该实例（只记 md 源文件，PDF 产物不入账），提交 `build(resume): 生成 ByteDance 投递版 PDF`。
-5. **投递前必打 tag**：`git tag v{版本}-{目标}-{YYYYMMDD}`，并在 `docs/INDEX.md` §3 台账登记（格式与细则见该节）。
+简历**实例**（非母版）的定制、构建、登记与投递打 tag 全流程，统一见 [`docs/strategy.md`](docs/strategy.md)（与母版操作分离：母版走 §3.1 / §3.3）。
 
 ### 3.3 母版更新后的同步
 
@@ -92,7 +88,7 @@ type(scope): subject
 
 ### 4.2 Tag 规范
 
-Tag 是"哪版投了哪家"的追溯机制：每次实际投递前**必须**打投递快照 tag 并在台账登记；格式定义、版本号细则与台账见 [`docs/INDEX.md`](docs/INDEX.md) §3。
+Tag 是"哪版投了哪家"的追溯机制：每次实际投递前**必须**打投递快照 tag 并在台账登记；格式定义、版本号细则与台账见 [`docs/strategy.md`](docs/strategy.md) §3。
 
 ### 4.3 默认提交义务
 

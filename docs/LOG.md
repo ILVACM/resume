@@ -17,4 +17,5 @@
 | 2026-09-06 22:25 | Agent | `TargetCompanies.md` 分组微调：具身智能（优必选）、机器视觉（奥比中光）自 AI / 大模型组拆出独立成组，AI 组 10→8，总 10 组 67 家不变 | docs/TargetCompanies.md | 用户指令；小改动 commit 追溯 + 本行登记 |
 | 2026-09-06 22:30 | Agent | `TargetCompanies.md` 分组微调：智能汽车组（比亚迪/小鹏/广汽 3 家）并入物联网 / 智能硬件组（9→12），总 9 组 67 家不变 | docs/TargetCompanies.md | 用户指令；警示备注保真 |
 | 2026-09-06 22:31 | Agent | `TargetCompanies.md` 分组重命名：`工业软件 / GIS / 智慧城市` → `领域专用软件开发`（3 家成员不变） | docs/TargetCompanies.md | 用户指令 |
+| 2026-09-07 19:42 | Agent | 分工重构：简历实例（非母版）操作流程与实例/tag 台账从 AGENTS.md §3.2、INDEX.md §2/§3 统一迁入 `docs/strategy.md`（流程 6 步 + §2 实例台账 + §3 tag 规范台账）；AGENTS.md §3.2 改指针、§4.2/§1 引用同步；INDEX.md 回归项目成果索引单一职责 | AGENTS.md、docs/strategy.md、docs/INDEX.md | 用户指令「既是精简也是明确分工」；AGENTS.md 4,266→3,961 字符；strategy.md 由空占位转正 |
 
