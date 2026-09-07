@@ -21,3 +21,4 @@
 | 2026-09-07 20:20 | Agent | 台账归位微调：§2 子版本简历实例台账迁回 `INDEX.md`（统一索引）；投递 tag 规范与台账迁入 `TargetCompanies.md` 文末（与目标公司同册）；strategy.md 回归纯流程文档（仅 §1 六步流程 + 维护说明）；AGENTS.md 职责表与 §3.2/§4.2 引用同步 | AGENTS.md、docs/strategy.md、docs/INDEX.md、docs/TargetCompanies.md | 用户指令；AGENTS.md 4,018 字符 |
 
 | 2026-09-07 21:58 | Agent | 投递 tag 规范独立为 `docs/tag.md`（快照封条类比/两种 tag/三条铁律/配合用法）；`TargetCompanies.md` 回归公司清单 + 投递状态跟踪 + 投递日志（原 tag 规范节删除，投递日志独立成节）；AGENTS.md/INDEX.md/strategy.md 引用同步 | AGENTS.md、docs/tag.md、docs/TargetCompanies.md、docs/INDEX.md、docs/strategy.md | 用户指令；最终格局：TargetCompanies=公司+状态+日志 / tag.md=tag 规范 / strategy=流程 / INDEX=成果+实例台账 |
+| 2026-09-07 22:45 | Agent | strategy.md 定制流程重构为两阶段：阶段 A 实例构建（5 步，产出 active 实例）/ 阶段 B 投递快照（4 步，基于任一已有 active 实例的一次投递，无需重新构建）；tag.md 补 tag 粒度规则（投递事件粒度，目标写实际公司名）；INDEX §2 补「对应 tag」列语义（记最新一次，历史查日志） | docs/strategy.md、docs/tag.md、docs/INDEX.md | 用户确认两阶段模型后落地；提交 8c61af9 |
