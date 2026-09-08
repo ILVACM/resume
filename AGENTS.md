@@ -56,9 +56,9 @@
 
 **同步更新校验**：INDEX §1 条目须与 `Resume.md` 保持一致（增删同步两处）；「相关领域」用语对齐 `TargetCompanies.md` 分组；资料索引"待补充"补齐后更新路径并删除该备注；相关文档改动落盘后按 §2 操作后校验复核。
 
-### 3.2 投递简历编写
+### 3.2 投递简历构建与投递
 
-简历**实例**（非母版）的定制流程统一见 [`docs/strategy.md`](docs/strategy.md)；  
+简历**实例**（非母版）的构建与投递流程统一见 [`docs/strategy.md`](docs/strategy.md)；  
 实例登记落 `docs/INDEX.md` §2；  
 投递 tag 规范见 `docs/tag.md`，台账与投递日志见 `docs/TargetCompanies.md`（母版操作走 §3.1）。
 
