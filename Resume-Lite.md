@@ -3,9 +3,10 @@
 ## 基本信息
 
 > 姓名：黄泊凯\
-> 联系电话：13600323338\
 > 邮箱：<3347620766@qq.com>\
-> 个人主页：[GitHub/ILVACM](https://github.com/ILVACM) | [Gitee/ILVACM](https://gitee.com/ILVACM)（本简历为要点速览，完整内容与证明材料见 Gitee Resume 仓库，实时同步）  
+> 联系电话：13600323338\
+> 个人主页：[GitHub/ILVACM](https://github.com/ILVACM) | [Gitee/ILVACM](https://gitee.com/ILVACM)\
+> **`本简历为要点速览，完整内容与证明材料见 Gitee Resume 仓库，实时同步`**  
 >
 > **求职方向：** {占位，构建实例时自适应替换}
 
@@ -19,7 +20,8 @@
 
 ## 相关知识技能
 
-AI工程化( RAG/ Dify/ Harness/ vLLM/) | 数据库( MySQL/ PostgreSQL/ TimescaleDB/ Redis/ Milvus/) | 系统部署运维( Linux-ARM/ NPU/ Docker)
+AGENT工程（ RAG/ Dify/ Harness/ vLLM/） | 常见前端后台（ Java_SpringBoot/ Python_FastAPI/） |  
+数据库（ MySQL/ PostgreSQL/ Redis/ Milvus/） | 系统部署运维（ Linux-ARM/ NPU/ Docker）
 
 ## 重要经历
 
