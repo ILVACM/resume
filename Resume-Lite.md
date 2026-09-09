@@ -6,9 +6,11 @@
 > 性别：男\
 > 联系电话：13600323338\
 > 邮箱：<3347620766@qq.com>\
-> 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)
+> 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)  
+>   
+> 本简历为个人经历要点速览，完整项目细节与证明材料见公开仓库：[gitee.com/ILVACM/Resume](https://gitee.com/ILVACM/Resume)（与仓库实时同步）。  
 >
-> **求职方向：** AI应用开发工程师 / 后端研发工程师 / 软件研发工程师（AI+系统集成方向）
+> **求职方向：** {占位，构建实例时自适应替换}
 
 ### 教育&专业背景
 
@@ -24,10 +26,3 @@ AI工程化( RAG/ Dify/ Harness/ vLLM/) | 数据库( MySQL/ PostgreSQL/ Timescal
 
 ## 重要经历
 
-### ·· 校企横向项目经历
-
-### ·· 学术纵向课题经历
-
-### ·· 企业实习经历
-
-### 竞赛与荣誉
