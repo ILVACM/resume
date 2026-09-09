@@ -136,7 +136,7 @@ python _temp/scripts/md2html.py input.md output.html
 
 ### 投递台账
 
-各投递版本的标签（Tag）管理见 `docs/INDEX.md` 中的投递 tag 台账。
+各投递版本的标签（Tag）管理见 `docs/TargetCompanies.md` 文末「投递日志」与 `docs/tag.md`。
 
 ## 协议
 
