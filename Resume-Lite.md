@@ -3,10 +3,9 @@
 ## 基本信息
 
 > 姓名：黄泊凯\
-> 性别：男\
 > 联系电话：13600323338\
 > 邮箱：<3347620766@qq.com>\
-> 个人主页：[GitHub](https://github.com/ILVACM) | [Gitee](https://gitee.com/ILVACM)（本简历为要点速览，完整版与证明材料见 Gitee Resume 仓库，实时同步）  
+> 个人主页：[GitHub/ILVACM](https://github.com/ILVACM) | [Gitee/ILVACM](https://gitee.com/ILVACM)（本简历为要点速览，完整内容与证明材料见 Gitee Resume 仓库，实时同步）  
 >
 > **求职方向：** {占位，构建实例时自适应替换}
 

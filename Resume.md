@@ -24,7 +24,6 @@
 - **AI 工程化应用**：   熟悉 LangChain 框架，具备 RAG（检索增强生成）业务流搭建与 Multi-Agent 任务编排的工程落地经验；了解计算机视觉(CV)模型的端侧部署
 - **数据库与中间件**：  熟练使用 MySQL, PostgreSQL/TimescaleDB, Redis；熟悉向量数据库（如 Milvus）的 API 调用与业务集成；掌握 JDBC/JPA 后端集成
 - **系统与边缘部署**：  熟悉 Linux/Windows 环境，具备 x86/ARM 跨架构适配经验；具有 Docker 容器化部署应用经验；具备服务器及高性能边缘计算设备的应用部署经验
-- **英语能力**：       通过 CET-4  
 
 ## 重要经历
 
