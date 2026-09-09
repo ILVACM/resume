@@ -43,7 +43,7 @@
 内容流向：`Resume.md` 母版（唯一事实来源）→ 提炼 `Resume-Lite.md` 骨架模板 → 复制定制实例 → 构建至 `_output/*.pdf`；**内容改动只能先在母版发生，再向下同步，禁止反向改写上层文件。**
 
 新增项目：
-1. 在 `docs/` 对应分类下建立 `docs/{横向|纵向|实习|竞赛}/{序号}-{项目简称}/` 目录，归档原始材料。
+1. 在 `docs/` 对应分类下建立 `docs/{横向|纵向|实习|竞赛}/{项目简称}/`（同组多项目建议加序号前缀区分），归档原始材料。
 2. 在 `docs/INDEX.md` §1 登记该项目性质、关联单位、起止时间、相关领域、资料路径（**索引先行**）。
 3. 依据索引条目，更新母版 `Resume.md` 对应章节的完整经历描述。
 4. 评估项目分量：若属核心成果，同步 Lite 版骨架（同步的是**结构**，非全部内容）。
@@ -52,9 +52,11 @@
 1. 改动只落在 `Resume.md`，提交为 `docs(resume): ...`。
 2. 评估 `Resume-Lite.md` 是否需同步——**同步的是结构（章节、条目顺序、骨架位置），而非全部正文内容**，Lite 版保持精简。
 3. 若需同步，由 EditAgent 提出改动点，确认后修改 Lite 版并提交 `docs(lite): ...`。
-4. 检查已有 `Resume-{目标}.md` 投递件是否受影响，必要时重建 PDF 并重打 tag（小版本递增）。
+4. 检查已有 `Resume-{目标}-{版本}-base.md` 实例是否受影响，必要时生成新版本实例（小版本递增，新建 -{版本}-base 文件并重建 PDF）。
 
 **同步更新校验**：INDEX §1 条目须与 `Resume.md` 保持一致（增删同步两处）；「相关领域」用语对齐 `TargetCompanies.md` 分组；资料索引"待补充"补齐后更新路径并删除该备注；相关文档改动落盘后按 §2 操作后校验复核。
+
+母版内容稳定（提交 docs(resume) 后）由 EditAgent 打基线 tag v{N}-base；内容实质修改升次；此 tag 与实例版本号相互独立，仅作母版定稿存档点。
 
 ### 3.2 投递简历构建与投递
 
@@ -81,7 +83,7 @@ type(scope): subject
 | `data` | `docs/` 原始材料增删 | `data(横向): 归档南方电网 RPA 项目验收报告扫描件` |
 | `index` | `docs/INDEX.md` 索引台账 | `index: 新增机场物流二期项目条目及资料路径` |
 | `rule` | 规则文档与配置 | `rule: 建立 AGENTS.md 协作规则与 .gitignore 策略` |
-| `build` | 生成 PDF 产物 | `build(resume): 生成 招银网络 v1.1 实例 PDF`（阶段 B 投递副本 PDF 同用此类型，subject 含公司名与日期） |
+| `build` | 生成 PDF 产物 | `build(resume): 生成 {目标指向} v{版本} 实例 PDF`（阶段 A，如 `生成 金融科技 v1.0 实例 PDF`）；阶段 B 投递副本同用此类型、subject 含公司名与日期（如 `生成 金融科技-招银网络 20260910 投递副本 PDF`） |
 | `chore` | 其他杂项 | `chore: 清理 _output 下过期投递件` |
 
 ### 4.2 默认提交义务
@@ -101,7 +103,7 @@ type(scope): subject
 | ScanAgent | 扫描 `docs/` 与仓库现状，识别新增/变更材料 | 扫描报告、待办清单 |
 | IndexAgent | 构建与维护 `docs/INDEX.md` 索引台账 | `docs/INDEX.md` |
 | DocAgent | 文档工程：规则、模板、产出流程 | `AGENTS.md` |
-| EditAgent | 母版与 Lite 版的编辑、校对、润色 | `Resume.md`、`Resume-Lite.md` |
+| EditAgent | 母版与 Lite 版的编辑、校对、润色；实例构建与投递（复制 Lite、填充、build PDF、打 tag、记投递日志） | `Resume.md`、`Resume-Lite.md`、`Resume-{目标}-{版本}-base.md` 及投递副本 |
 | AuditAgent | 整合审计：一致性校验、索引与正文对账 | 审计报告、修正建议 |
 
 - **写权限隔离**：任一文件只有一个责任 Agent，其他 Agent 需改动时提交建议。
