@@ -9,11 +9,11 @@
 | 文件 | 角色 | 约束 |
 |---|---|---|
 | `Resume.md` | 母版（唯一事实来源） | 含 7 段完整经历；只读，不直接投递 |
-| `Resume-Lite.md` | 只读模板（骨架精简版） | 严禁直接修改；定制时先复制再重命名 |
+| `Resume-Lite.md` | 基本模板（实例的结构基准，内容从母版提取） | 维护走 §3.1 同步流程（EditAgent 执行）；构建实例时先复制再重命名 |
 | `docs/INDEX.md` | 统一索引台账 | §1 项目成果索引（相关领域对齐 TargetCompanies 分组）+ §2 子版本简历实例台账，由 IndexAgent 维护 |
 | `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；含投递状态跟踪与投递日志 |
 | `docs/tag.md` | 投递 tag 规范 | tag 格式、铁律与用法的唯一权威文档；tag 台账与日志记录落 TargetCompanies |
-| `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程的唯一权威文档；实例登记落 INDEX §2 |
+| `docs/strategy.md` | 简历实例定制与投递策略 | 实例（非母版）操作流程与实例构建方案的唯一权威文档；实例登记落 INDEX §2 |
 | `docs/LOG.md` | 操作日志 | 重大操作（重命名/移动/删除/目录调整/批量修改）须登记：日期时间、操作者、操作、涉及路径、备注，人工与 Agent 均适用（细则见 §3.3） |
 
 ### 目录职责
@@ -81,7 +81,7 @@ type(scope): subject
 | `data` | `docs/` 原始材料增删 | `data(横向): 归档南方电网 RPA 项目验收报告扫描件` |
 | `index` | `docs/INDEX.md` 索引台账 | `index: 新增机场物流二期项目条目及资料路径` |
 | `rule` | 规则文档与配置 | `rule: 建立 AGENTS.md 协作规则与 .gitignore 策略` |
-| `build` | 生成 PDF 产物 | `build(resume): 生成 v1.1 ByteDance 投递版 PDF` |
+| `build` | 生成 PDF 产物 | `build(resume): 生成 招银网络 v1.1 实例 PDF`（阶段 B 投递副本 PDF 同用此类型，subject 含公司名与日期） |
 | `chore` | 其他杂项 | `chore: 清理 _output 下过期投递件` |
 
 ### 4.2 默认提交义务
