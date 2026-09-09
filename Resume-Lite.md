@@ -6,9 +6,7 @@
 > 性别：男\
 > 联系电话：13600323338\
 > 邮箱：<3347620766@qq.com>\
-> 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)  
->   
-> 本简历为个人经历要点速览，完整项目细节与证明材料见公开仓库：[gitee.com/ILVACM/Resume](https://gitee.com/ILVACM/Resume)（与仓库实时同步）。  
+> 个人主页：[GitHub](https://github.com/ILVACM) | [Gitee](https://gitee.com/ILVACM)（本简历为要点速览，完整版与证明材料见 Gitee Resume 仓库，实时同步）  
 >
 > **求职方向：** {占位，构建实例时自适应替换}
 
