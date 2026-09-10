@@ -3,7 +3,7 @@
 > **定位**：投递目标管理的唯一事实来源。  
 > **用途**：定制投递版简历（AGENTS.md §3.2 / docs/strategy.md）的目标选取依据；投递 tag 规范见 tag.md，投递日志见本文件文末「投递日志」。
 > **整理时间**：2026-09-06（按公司性质重组分组）  
-> **公司总数**：200 家  
+> **公司总数**：203 家  
 
 ## 使用说明
 
@@ -18,14 +18,14 @@
 | AI / 大模型 | 13 |
 | 具身智能 | 6 |
 | 机器视觉 | 2 |
-| 物联网 / 智能硬件 | 51 |
-| 普通互联网（大厂） | 28 |
-| 企业服务 / SaaS / 云 | 13 |
+| 物联网 / 智能硬件 | 52 |
+| 普通互联网（大厂） | 29 |
+| 企业服务 / SaaS / 云 | 14 |
 | 领域专用软件开发 | 15 |
 | 政企信息化 | 36 |
 | 金融证券 / 金融科技 | 28 |
 | 软件外包 | 8 |
-| **合计** | **200** |
+| **合计** | **203** |
 ## AI / 大模型（13 家）
 
 | 公司名称 | 策略 | 主营业务 | 关注岗位 | 推荐来源 | 投递简历 | 状态 | 其他备注 |
@@ -62,7 +62,7 @@
 | 奥比中光 | 冲 | 机器视觉 |  | 师兄内推 |  |  |  |
 | 凌云光 |  |  |  | 校园招聘 |  |  | 网申链接：https://app.mokahr.com/m/campus-recruitment/lusterinc/44882?recommendCode=DSVa97Qf&hash=%23%2Fjobs；网申链接：https://app.mokahr.com/m/campus-recruitment/lusterinc/44882?recommendCode=DSXvwe8A#/jobs |
 
-## 物联网 / 智能硬件（51 家）
+## 物联网 / 智能硬件（52 家）
 
 | 公司名称 | 策略 | 主营业务 | 关注岗位 | 推荐来源 | 投递简历 | 状态 | 其他备注 |
 |---|---|---|---|---|---|---|---|
@@ -76,7 +76,7 @@
 | 安克创新 (Anker) | 尝试 | 充电宝\智能安防(eufy)-IoT\智能影音 |  |  |  |  |  |
 | 格力电器(大数据/AI中心) | 尝试 | 传统家电（有传言其正在建设IoT云平台和AI质检） |  |  |  |  |  |
 | 比亚迪（规划院\工程院\迪链） | 尝试 | 汽车\IoT |  | 自搜 |  |  | 警示：严格按学校档次分档定薪 |
-| 小鹏汽车 / 小鹏集团（同主体，双入口聚合） | 尝试 | 汽车\IoT |  | 自搜、校园招聘 |  |  | 警示：核心算法岗卡学历，主攻非算法的软件研发岗；网申：https://xiaopeng.jobs.feishu.cn/s/lYDTaaPV73c；码：KZ64EXA |
+| 小鹏汽车 / 小鹏集团（同主体，双入口聚合） | 尝试 | 汽车\IoT |  | 校园招聘 |  |  | 警示：核心算法岗卡学历，主攻非算法的软件研发岗；网申：https://xiaopeng.jobs.feishu.cn/s/lYDTaaPV73c；码：KZ64EXA |
 | 广汽集团（广汽研究院/大圣科技） | 尝试 | 汽车\IoT |  | 自搜 |  |  |  |
 | CVTE |  | 显示控制板卡/教育信息化（视源股份） |  | 校园招聘 |  |  |  |
 | 三星 |  | 电子/半导体（外企） |  | 校园招聘 |  |  |  |
@@ -109,7 +109,7 @@
 | 海尔 |  |  |  | 校园招聘 |  |  | 网申链接：https://maker.haier.net/client/campusmobile/customizedjobs/type/top.html?inviter_code=OWd0aWxHeVM0ajQ9 |
 | 汇川技术 |  |  |  | 校园招聘 |  |  | 网申链接：https://recruit.inovance.com/#/jobs?ref=APHZ76D |
 | 亿联 |  |  |  | 校园招聘 |  |  | 网申链接：https://yealink.zhiye.com/campus/jobs；码：ESKJAB |
-| 基恩士 |  |  |  | 校园招聘 |  |  | 网申链接：https://keyence.zhiye.com/campus/jobs?shareId=989c757b-b304-4bba-8f42-339636bae28a&shareSource=2&qr=1；码：EV3J00 |
+| 基恩士 |  |  |  | 校园招聘 |  |  | 网申链接：https://keyence.zhiye.com/campus/jobs?shareId=989c757b-b304-4bba-8f42-339636bae28a&shareSource=2&qr=1；码：EV3J00；广工专场投递：https://www.keyence.com.cn/career664（携带简历可跳过网申筛选直接现场面试） |
 | 舜宇集团 |  |  |  | 校园招聘 |  |  | 网申链接：https://app.mokahr.com/m/campus-recruitment/sunnyoptical/45602?recommendCode=DSauMTqX#/jobs |
 | 拓竹科技 |  |  |  | 校园招聘 |  |  | 网申链接：https://bambulab.jobs.feishu.cn/s/LTWK1hx3iIg |
 | 海能达 |  |  |  | 校园招聘 |  |  | 网申链接：https://app.mokahr.com/m/campus_apply/hytera/182194?recommendCode=DSJgA1m6#/jobs |
@@ -117,8 +117,9 @@
 | 思特威电子科技 |  |  |  | 校园招聘 |  |  | 网申链接：https://app.mokahr.com/campus_apply/smartsenstech1/56088?recommendCode=DSWeJQPY#/jobs |
 | 卧安机器人 |  |  |  | 校园招聘 |  |  | 网申链接：https://woanhome.zhiye.com/campus/jobs；码：EVKR08 |
 | 启源芯动力 |  |  |  | 校园招聘 |  |  | 网申链接：https://spicqyxdl.zhiye.com/campus/jobs；码：EVVM9B |
+| 诺力装备 |  | 智能物流装备（叉车/AGV/仓储系统） |  | 校园招聘 |  |  |  |
 
-## 普通互联网（大厂）（28 家）
+## 普通互联网（大厂）（29 家）
 
 | 公司名称 | 策略 | 主营业务 | 关注岗位 | 推荐来源 | 投递简历 | 状态 | 其他备注 |
 |---|---|---|---|---|---|---|---|
@@ -150,8 +151,9 @@
 | 去哪儿 |  |  |  | 校园招聘 |  |  | 网申链接：https://datayi.cn/w/xRxV8QVo；网申链接：https://datayi.cn/w/xogkXY2o |
 | 平行线教育 |  |  |  | 校园招聘 |  |  | 网申链接：https://zzpxx.zhiye.com/campus/jobs；码：ESVWBH |
 | TP-LINK（普联/联洲） |  |  |  |  |  |  | 网申链接：https://join.tplinkglobal.com/share/jobs?share_id=2090630979320004610&share_type=qr；码：EV3GVK；网申链接：hr.tp-link.com.cn；码：XYDS013 |
+| 雷特科技（砺星 Leetx） |  | 跨境电商 |  | 校园招聘 |  |  | 网申：https://morningfast.zhiye.com/campus；官方QQ群：923731263 |
 
-## 企业服务 / SaaS / 云（13 家）
+## 企业服务 / SaaS / 云（14 家）
 
 | 公司名称 | 策略 | 主营业务 | 关注岗位 | 推荐来源 | 投递简历 | 状态 | 其他备注 |
 |---|---|---|---|---|---|---|---|
@@ -168,6 +170,7 @@
 | 微步在线 |  |  |  | 校园招聘 |  |  | 网申链接：https://app.mokahr.com/m/campus_apply/threatbook/39679?recommendCode=DSphCHUZ#/jobs |
 | 帆软 |  |  |  | 校园招聘 |  |  | 网申链接：https://t6ixa9nyl6.jiandaoyun.com/f/65e1a1308ce7672fded0f0cf?ext=XDUWSK；码：XDUWSK |
 | 易点云 |  |  |  | 校园招聘 |  |  | 网申链接：https://recruit-pro.edianyun.com/#/wap/recruitment-collect；码：YD0541 |
+| 埃森哲 |  | IT 咨询与专业服务（外企） |  | 校园招聘 |  |  |  |
 
 ## 领域专用软件开发（15 家）
 
