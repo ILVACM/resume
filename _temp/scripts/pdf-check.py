@@ -4,7 +4,7 @@
 PDF 回归校验：页数 / Producer / 字体集合 / 块引用背景与边框
 
 用法：
-    python scripts/pdf-check.py Resume.pdf
+    python scripts/pdf-check.py Resume.pdf [--max-pages N]
 
 判据说明：
   - Producer 应为 Skia/PDF m15x（Chromium 打印引擎签名），证明走的是 Edge/Chrome 路线
@@ -37,6 +37,17 @@ def main():
         return 1
 
     path = sys.argv[1]
+
+    # 可选页数上限：仅当显式传入 --max-pages N 时判定（母版多页不受影响）
+    max_pages = None
+    if '--max-pages' in sys.argv:
+        i = sys.argv.index('--max-pages')
+        try:
+            max_pages = int(sys.argv[i + 1])
+        except (IndexError, ValueError):
+            print('用法错误: --max-pages 需要一个整数参数', file=sys.stderr)
+            return 1
+
     data = open(path, 'rb').read()
 
     counts = re.findall(rb'/Count\s+(\d+)', data)
@@ -69,6 +80,8 @@ def main():
 
     if pages == 0:
         problems.append('未能解析页数，PDF 可能损坏')
+    if max_pages is not None and pages > max_pages:
+        problems.append('页数 %d 超过上限 %d（字数闸门可能失效，请复核字数预算）' % (pages, max_pages))
     if 'Skia/PDF' not in producer:
         warnings.append('Producer 不是 Skia/PDF，可能不是 Chromium 打印产物（%s）' % producer)
     if not has_gray_bg or not has_blue_border:

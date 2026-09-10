@@ -50,6 +50,27 @@ BASE="$(basename "${MD%.md}")"
 
 mkdir -p "$BUILD" "$PROFILE"
 
+# ---- 字数闸门：机制化保证「简历实例 PDF ≤ 2 页」----
+# 口径：去空白码点字符数 = len(''.join(text.split()))，与 docs/strategy.md 字数预算表一致。
+# 上限 2200 为 2026-09-11 标定实测锁定值（2239 仍为 2 页 / 2280 已为 3 页）。
+# 母版 Resume.md 与模板 Resume-Lite.md 自动豁免；RESUME_MAX_CHARS=0 表示显式关闭。
+MAX_CHARS="${RESUME_MAX_CHARS:-2200}"
+BASE_NAME="$(basename "$MD")"
+if [ "$BASE_NAME" = "Resume.md" ] || [ "$BASE_NAME" = "Resume-Lite.md" ] || [ "$MAX_CHARS" = "0" ]; then
+  echo "      [闸门] 已豁免：$BASE_NAME（母版/模板，或已显式关闭上限）"
+else
+  WORDS=$("$PYTHON" -X utf8 -c "import sys;print(len(''.join(open(sys.argv[1],encoding='utf-8').read().split())))" "$(cygpath -w "$MD")")
+  echo "      [闸门] 字数 $WORDS / 上限 $MAX_CHARS"
+  if [ "$WORDS" -gt $((MAX_CHARS * 90 / 100)) ]; then
+    echo "      [WARN] 已用 $WORDS 字，达上限 90% 以上，PDF 可能逼近 2 页。" >&2
+  fi
+  if [ "$WORDS" -gt "$MAX_CHARS" ]; then
+    echo "      [拦截] 字数 $WORDS 超过上限 $MAX_CHARS，停止构建以防 PDF 超 2 页。" >&2
+    echo "      请裁剪示范条目；如需临时覆盖请设 RESUME_MAX_CHARS 后重试。" >&2
+    exit 2
+  fi
+fi
+
 echo "[1/3] MD -> HTML  $MD"
 # 注意：PYTHON 是 Windows 原生程序，POSIX 路径 /d/Resume 会被误解析为 D:\d\Resume，
 # 因此传给它的所有路径都必须先经 cygpath -w 转换。
