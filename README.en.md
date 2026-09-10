@@ -1,145 +1,100 @@
-# Resume Management System (Resume)
+# Huang Bokai · Resume & Application Management System
 
-## Project Introduction
+> **Huang Bokai** (Male) | Guangdong University of Technology · School of Computer Science · Software Engineering (B.Eng., Class of 2027)
+> **Career Objective**: AI Application Engineer / Backend Engineer / Software Engineer (AI + System Integration)
+> **Phone**: 13600323338 | **Email**: 3347620766@qq.com | **Homepage**: [github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)
 
-This project is a professional personal resume management system, focusing on the Fall 2027 recruitment job search scenario. The system uses Markdown format to manage resume content, supports multi-version customized output, and provides complete application target management and collaboration standards.
+## Education
 
-## Directory Structure
+**Guangdong University of Technology** | School of Computer Science | Software Engineering (B.Eng., Class of 2027) | Sep 2023 - Present
 
-```
-Resume/
-├── AGENTS.md              # Collaboration Norms and Workflow Description
-├── Resume.md              # Master Resume
-├── Resume-Lite.md         # Lite Resume
-├── LICENSE                # Open Source License
-├── docs/
-│   ├── INDEX.md           # Achievements and Version Index
-│   ├── LOG.md             # Operation Log
-│   ├── TargetCompanies.md # Target Company List for Applications
-│   ├── strategy.md        # Job Hunting Strategy Document
-│   ├── tag.md             # Application tag specification
-│   ├── {横向 | 纵向 | 实习 | 竞赛}/  # Project materials (by category)
-│   └── 其他补充描述/       # Extra descriptions for job-board forms
-├── _temp/scripts/         # Build Tools
-│   ├── build-pdf.sh       # PDF Build Script
-│   ├── md2html.py         # Markdown to HTML Tool
-│   ├── pdf-check.py       # PDF Check Tool
-│   └── styles/            # CSS Style Files
-└── _output/               # Sole PDF deliverable directory (contents ignored; keep .gitkeep)
-```
+- **Algorithms**: Selected into the university ACM Algorithm Training Team in the first semester of freshman year (one of 19 admitted)
+- **Hardware Extension**: Joined the university's "Huawei-Ascend" Innovation Studio (embedded systems track), focusing on hardware-system integration
+- **Research Experience**: Joined the Guangdong Provincial Engineering Center for Physical Information Fusion (National-Local Joint Engineering Center) as an undergraduate researcher, advised by Associate Prof. Huang Guoheng
 
-## Core Features
+## Skills
 
-### 1. Multi-Version Resume Management
+| Area | Details |
+|---|---|
+| Languages | Python, C/C++, Java, SQL, Shell |
+| AI Engineering | LangChain; hands-on delivery of RAG (retrieval-augmented generation) pipelines and Multi-Agent task orchestration; familiar with on-device deployment of computer-vision models |
+| Databases & Middleware | MySQL, PostgreSQL / TimescaleDB, Redis; vector database (Milvus) API integration; JDBC / JPA backend integration |
+| Systems & Edge Deployment | Linux / Windows; x86 / ARM cross-architecture adaptation; Docker containerized deployment; servers and high-performance edge computing devices |
 
-- **Master Resume (Resume.md)**: Complete version resume, containing all projects and experiences.
-- **Lite Resume (Resume-Lite.md)**: Condensed version customized for different positions.
+## Experience Highlights
 
-### 2. Application Target Management
+### Industry–Academia Collaborative Projects
 
-The system maintains a clearly categorized list of application targets, covering multiple popular directions:
+**Guangzhou Power Engineering Supervision Co., Ltd. (南方电网) | Office Automation RPA Project | Core Developer | Oct 2024 - Jan 2025**
 
-- AI / Large Language Models
-- Embodied AI
-- Machine Vision
-- IoT / Smart Hardware
-- Ordinary Internet (Big Tech)
-- Enterprise Services / SaaS / Cloud
-- Industry-Specific Software Development
-- Government and Enterprise Informatization
-- Financial Securities / FinTech
-- Software Outsourcing
+- Designed a JSON-based "data-template" decoupled mapping engine: template changes require only configuration edits, no code changes; integrated heterogeneous XLS/XLSX data sources
+- Delivered and deployed: daily manual reporting cut from 1.5 hours to **under 3 minutes**, eliminating manual errors
 
-### 3. Version Output
+**Airport Logistics Group (机场物流集团) | Smart Logistics System Iteration (Industry-Academia Framework Agreement) | Project Lead (Phase II) / Operations (Phase I) | Sep 2024 - Sep 2026**
 
-Supports multiple output formats to meet different application scenario needs:
+- Cumulative contract value **¥900K** (Phase I ¥350K / Phase II ¥550K); independently led the full lifecycle of Phase II and **11 categories** of AI vision-based violation monitoring in the transfer area (speeding, absence from post, fainting/falls, etc.)
+- Deployed models to a domestic neuromorphic edge computing box (**32 TOPS INT8**), achieving **≤200ms** single-stream latency and **≥25FPS**; built cloud-edge monitoring (Prometheus + Grafana, 15+ alert rules) with **99.5%** availability and <5 min P1 recovery
 
-- **PDF Format**: Suitable for formal applications.
-- **HTML Format**: Convenient for online viewing and sharing.
+**Guangdong Jiaoke Testing Co., Ltd. (广东交科) | Rebar Diameter & Spacing Inspection Device (Prototype) | Technical Lead | Sep 2025 - Sep 2026**
 
-### 4. Collaboration Norms
+- Dual-node edge architecture (Jetson Nano for inference + OrangePi KunPeng for acquisition/conversion) with bidirectional gRPC (custom protobuf), isolating failure domains
+- UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype validated
 
-The project establishes a complete workflow specification:
+### Academic Research Projects
 
-- Verification takes precedence over trust principle.
-- Clear Git commit conventions.
-- Tag management strategy.
-- Multi-Agent collaboration guidance.
+**Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Core Developer (2nd Lead of Provincial Innovation Program) | Jun 2024 - Oct 2024**
 
-## Quick Start
+- Joint research project with the China Southern Power Grid Research Institute (provincially funded), targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
+- Authored the *Image Quality Assessment & Optimization Plan* (edge-side objective pre-screening + server-side Transformer NR-IQA); YOLOv8 + ByteTrack tracking with smooth PTZ control; built the WireFO-MEF dataset achieving **70%+** edge recall/precision and **80%+** subjective-objective consistency
 
-### Environment Requirements
+**Guangdong Provincial Natural Science Foundation 2026 (General Program) | Core Algorithm Developer | Jun 2025 - Present**
 
-- Python 3.x
-- Edge Browser (for PDF generation)
+- *Lightweight Diagnostic Report Generation under Modality Missing* (No. 2614050003331), built on a multimodal private dataset of **600+ cases** from the Sun Yat-sen University Cancer Center
+- PyTorch + RAG + Multi-Agent "diagnose-verify-arbitrate" loop; independently managed the GPU server environment and the data cleaning, de-identification and ROI-cropping pipeline; assisted in drafting the grant proposal
 
-### Generate PDF Resume
+### Internships
 
-```bash
-# Execute build script
-bash _temp/scripts/build-pdf.sh Resume-Lite.md _output/Resume-Lite.pdf
-```
+**Guangzhou Guangdian Information Technology Co., Ltd. (广州光点) | Python Development Intern (AI R&D Group) | Mar 2025 - Jun 2025**
 
-### Markdown to HTML
+- Built an all-media trending-topic tracking and AI short-video generation matrix, delivering the full "monitor → generate → compose" pipeline from scratch
+- FastAPI microservices + hybrid scheduling across local vLLM and cloud APIs + Celery/Redis async orchestration; reduced per-video production from hours of manual work to **under 15 minutes**
 
-```bash
-# Use conversion tool
-python _temp/scripts/md2html.py input.md -o output.html
-```
+**Guangdong Provincial Institute of Land and Resources Surveying and Mapping (广东省国土资源测绘院) | System Development Intern (Satellite Application Center) | Jul 2025 - Oct 2025**
 
-## Usage Instructions
+- GDCORS intelligent knowledge base and government-enterprise on-premises RAG Q&A system over **3PB** of geospatial data, meeting strict "data never leaves the premises" compliance
+- Tens of millions of document chunks stored in Milvus; HyDE + multi-route retrieval (vector + BM25) + BGE-Reranker; built an LLM-as-a-Judge evaluation system from scratch, reaching **90%+** domain Q&A accuracy
 
-### Add New Projects
+## Competitions & Honors
 
-Add new project experience according to the workflow specifications defined in AGENTS.md.
+**2024**
 
-### Customize Application Version Resumes
+- Huawei 2024 Ascend AI Innovation Competition · Most Promising Business Potential Award (University Track)
+- Huawei 2024 Kunpeng Application Innovation Competition · National Semifinalist (Development Board Track)
+- 17th China Collegiate Computing Competition · 3 works shortlisted at provincial level (Team Lead)
+- China Southern Power Grid Internal Visual Recognition Competition (Guy-Wire Corrosion Track) · 8th Place (Team Lead)
 
-Based on the master resume, customize exclusive versions according to target companies and position requirements.
+**2023**
 
-### Synchronize Updates
+- PTA Ladder Team Programming Contest · 5th Place Nationwide among Universities (core member, University ACM Training Team)
+- GDUT "Huawei Cup" Programming Contest · Third Prize (ranked 19th on campus; admitted to the ACM Training Team)
+- 2023 "Holtek Cup" Microcontroller Application Design Competition · Provincial Second Prize
+- Horse Hoof Cup (Baidu Star) Programming Contest · Provincial Third Prize
 
-When the master resume is updated, synchronize updates for each application version according to specifications.
+## About This Repository
 
-## Resume Content Overview
+A **Git-based, version-controlled resume and application management system**: `Resume.md` (the master resume, single source of truth) is the content source, from which `Resume-Lite.md` (the structural template for application instances) and per-company custom instances are derived; all PDF artifacts are output to `_output/`. Customization workflow: `docs/strategy.md`; application tag convention: `docs/tag.md`; achievements and instance ledger: `docs/INDEX.md`; target company list: `docs/TargetCompanies.md`.
 
-### Basic Information
+### Current Status
 
-- Education Background and Professional Skills
-- Core Knowledge and Skill Stack
+| Item | Status |
+|---|---|
+| Master resume `Resume.md` | Finalized: 7 full experiences + competitions & honors; supporting materials archived under `docs/` |
+| Template `Resume-Lite.md` | Finalized: a 27-line skeleton, with project content filled from the plan library |
+| Instance build plan library | **10 groups** established; the sample content is a first draft and **awaits manual review** before instances can be built |
+| Custom instances | **None yet** (instance ledger empty) |
+| Target companies | **203 companies / 10 groups** ready; the "Positions of Interest" column is pending |
 
-### Project Experience
-
-**School-Enterprise Collaborative Projects:**
-- Southern Power Grid RPA-Assisted Software Development Project (Core R&D)
-- Airport Logistics Group Smart Logistics System Iteration (Project Lead)
-- Reinforcement Steel Inspection Equipment Prototype R&D (Technical Lead)
-
-**Academic Research Projects:**
-- Edge Surveillance Sphere Adaptive Object Detection System (Core R&D)
-- Guangdong Provincial Natural Science Foundation Project (Core Algorithm Development)
-
-**Corporate Internships:**
-- Guangzhou Lightpoint Information Technology (Python Development Intern)
-- Guangdong Provincial Land and Resources Surveying and Mapping Institute (System Development Intern)
-
-### Competitions and Honors
-
-Records various competition awards and honorary qualifications.
-
-## Maintenance Guide
-
-### Version Index
-
-All resume versions and deliverable change records can be viewed in `docs/INDEX.md`.
-
-### Operation Log
-
-Detailed operation change logs are saved in `docs/LOG.md`.
-
-### Application Ledger
-
-Tag management for each application version can be found in `docs/tag.md` (see also the "对应 tag" column of the delivery log in `docs/TargetCompanies.md`).
+Collaboration rules, directory responsibilities and technical details: see [`AGENTS.md`](AGENTS.md) and [`docs/`](docs/).
 
 ## License
 
@@ -147,6 +102,4 @@ This project adopts the open source license specified in [LICENSE](./LICENSE).
 
 ---
 
-**Maintainer**: ILVACM
-
-**Last Updated**: 2026
+**Maintainer**: ILVACM | **Last Updated**: 2026
