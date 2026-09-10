@@ -1,7 +1,7 @@
 # strategy.md — 简历编写与投递策略
 
 > **定位**：简历**实例**（`Resume-{目标}-{版本}-base.md`，区别于母版 `Resume.md`）的定制操作流程与实例构建方案的唯一权威文档。
-> **分工**：母版维护走 `AGENTS.md` §3.1；实例登记见 [`INDEX.md`](INDEX.md) §2；投递 tag 规范见 [`tag.md`](tag.md)，日志见 [`TargetCompanies.md`](TargetCompanies.md)。
+> **分工**：母版维护走 `AGENTS.md` §4.1；实例登记见 [`INDEX.md`](INDEX.md) §2；投递 tag 规范见 [`tag.md`](tag.md)，日志见 [`TargetCompanies.md`](TargetCompanies.md)。
 
 ## 定制投递流程（两阶段，且相对独立）
 
@@ -32,7 +32,7 @@
 3. **打投递快照 tag**：`git tag v{版本}-{投递公司名称}-{YYYYMMDD}`——与投递副本文件名的版本 / 公司 / 日期三要素一致；格式与铁律见 [`tag.md`](tag.md)。
 4. **记录投递日志**：在 [`TargetCompanies.md`](TargetCompanies.md) 的投递日志追加一行（日期 / 简历文件 / 目标公司），其中「简历文件」填**投递副本文件名**；不覆盖旧记录。
 5. **更新状态**：公司清单中该公司的「投递简历 / 状态」列更新为最新进展（`投递中` / `一面` / `二面` / `offer` / `挂`），「投递简历」填投递副本文件名；`INDEX.md` §2 该实例的「对应 tag」列更新为**最新一次**投递的 tag。
-6. **提交落盘**：按 AGENTS.md §4.2 默认提交改动（`build(resume)` 类型，subject 含公司名与日期）；提交失败须明确上报。本次提交统一覆盖投递副本、INDEX §2 与 TargetCompanies 状态等全部关联改动。
+6. **提交落盘**：按 AGENTS.md §5.2 默认提交改动（`build(resume)` 类型，subject 含公司名与日期）；提交失败须明确上报。本次提交统一覆盖投递副本、INDEX §2 与 TargetCompanies 状态等全部关联改动。
 
 ## 实例构建方案设计
 
