@@ -6,7 +6,8 @@
 > 性别：男\
 > 联系电话：13600323338\
 > 邮箱：<3347620766@qq.com>\
-> 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)
+> 个人技术主页：[github.com/ILVACM](https://github.com/ILVACM) | [gitee.com/ILVACM](https://gitee.com/ILVACM)\
+> **`本简历为完整版母版（唯一事实来源），非投递件；正式投递请使用按目标公司定制的实例版本`**  
 >
 > **求职意向：** AI应用开发工程师 / 后端研发工程师 / 软件研发工程师（AI+系统集成方向）
 
