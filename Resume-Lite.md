@@ -8,7 +8,7 @@
 > 个人主页：[GitHub/ILVACM](https://github.com/ILVACM) | [Gitee/ILVACM](https://gitee.com/ILVACM)\
 > **`本简历为要点速览，完整内容与证明材料见 Gitee Resume 仓库，实时同步`**  
 >
-> **求职方向：** {占位，构建实例时自适应替换}
+> **求职意向：** {占位，构建实例时以母版求职意向原文替换}
 
 ### 教育&专业背景
 
