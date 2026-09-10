@@ -16,12 +16,16 @@ Resume/
 │   ├── INDEX.md           # Achievements and Version Index
 │   ├── LOG.md             # Operation Log
 │   ├── TargetCompanies.md # Target Company List for Applications
-│   └── strategy.md        # Job Hunting Strategy Document
-└── _temp/scripts/         # Build Tools
-    ├── build-pdf.sh       # PDF Build Script
-    ├── md2html.py         # Markdown to HTML Tool
-    ├── pdf-check.py       # PDF Check Tool
-    └── styles/            # CSS Style Files
+│   ├── strategy.md        # Job Hunting Strategy Document
+│   ├── tag.md             # Application tag specification
+│   ├── {横向 | 纵向 | 实习 | 竞赛}/  # Project materials (by category)
+│   └── 其他补充描述/       # Extra descriptions for job-board forms
+├── _temp/scripts/         # Build Tools
+│   ├── build-pdf.sh       # PDF Build Script
+│   ├── md2html.py         # Markdown to HTML Tool
+│   ├── pdf-check.py       # PDF Check Tool
+│   └── styles/            # CSS Style Files
+└── _output/               # Sole PDF deliverable directory (contents ignored; keep .gitkeep)
 ```
 
 ## Core Features
@@ -39,11 +43,12 @@ The system maintains a clearly categorized list of application targets, covering
 - Embodied AI
 - Machine Vision
 - IoT / Smart Hardware
-- Internet Tech Giants
+- Ordinary Internet (Big Tech)
 - Enterprise Services / SaaS / Cloud
 - Industry-Specific Software Development
 - Government and Enterprise Informatization
 - Financial Securities / FinTech
+- Software Outsourcing
 
 ### 3. Version Output
 
@@ -72,14 +77,14 @@ The project establishes a complete workflow specification:
 
 ```bash
 # Execute build script
-bash _temp/scripts/build-pdf.sh
+bash _temp/scripts/build-pdf.sh Resume-Lite.md _output/Resume-Lite.pdf
 ```
 
 ### Markdown to HTML
 
 ```bash
 # Use conversion tool
-python _temp/scripts/md2html.py input.md output.html
+python _temp/scripts/md2html.py input.md -o output.html
 ```
 
 ## Usage Instructions
@@ -134,7 +139,7 @@ Detailed operation change logs are saved in `docs/LOG.md`.
 
 ### Application Ledger
 
-Tag management for each application version can be found in the application tag ledger in `docs/INDEX.md`.
+Tag management for each application version can be found in `docs/tag.md` (see also the "对应 tag" column of the delivery log in `docs/TargetCompanies.md`).
 
 ## License
 
@@ -144,4 +149,4 @@ This project adopts the open source license specified in [LICENSE](./LICENSE).
 
 **Maintainer**: ILVACM
 
-**Last Updated**: 2025
+**Last Updated**: 2026

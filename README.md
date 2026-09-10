@@ -18,12 +18,16 @@ Resume/
 │   ├── INDEX.md           # 成果与版本索引
 │   ├── LOG.md             # 操作日志
 │   ├── TargetCompanies.md # 投递目标公司清单
-│   └── strategy.md        # 求职策略文档
-└── _temp/scripts/         # 构建工具
-    ├── build-pdf.sh       # PDF构建脚本
-    ├── md2html.py         # Markdown转HTML工具
-    ├── pdf-check.py       # PDF检查工具
-    └── styles/            # CSS样式文件
+│   ├── strategy.md        # 求职策略文档
+│   ├── tag.md             # 投递 tag 规范
+│   ├── {横向 | 纵向 | 实习 | 竞赛}/  # 原始证明材料（按项目性质分类）
+│   └── 其他补充描述/       # 招聘网站填报用素材
+├── _temp/scripts/         # 构建工具
+│   ├── build-pdf.sh       # PDF构建脚本
+│   ├── md2html.py         # Markdown转HTML工具
+│   ├── pdf-check.py       # PDF检查工具
+│   └── styles/            # CSS样式文件
+└── _output/               # 唯一 PDF 结果目录（忽略内容，保留 .gitkeep）
 ```
 
 ## 核心功能
@@ -31,7 +35,7 @@ Resume/
 ### 1. 多版本简历管理
 
 - **主版简历 (Resume.md)**：完整版简历，包含所有项目和经历
-- **精简版简历 (Resume-Lite.md)**：针对不同岗位定制的精简版本
+- **精简版简历 (Resume-Lite.md)**：基本模板（实例的结构基准，复制后填充定制）
 
 ### 2. 投递目标管理
 
@@ -41,11 +45,12 @@ Resume/
 - 具身智能
 - 机器视觉
 - 物联网 / 智能硬件
-- 互联网大厂
+- 普通互联网（大厂）
 - 企业服务 / SaaS / 云
 - 领域专用软件开发
 - 政企信息化
 - 金融证券 / 金融科技
+- 软件外包
 
 ### 3. 版本输出
 
@@ -74,14 +79,14 @@ Resume/
 
 ```bash
 # 执行构建脚本
-bash _temp/scripts/build-pdf.sh
+bash _temp/scripts/build-pdf.sh Resume-Lite.md _output/Resume-Lite.pdf
 ```
 
 ### Markdown 转 HTML
 
 ```bash
 # 使用转换工具
-python _temp/scripts/md2html.py input.md output.html
+python _temp/scripts/md2html.py input.md -o output.html
 ```
 
 ## 使用说明
@@ -92,7 +97,7 @@ python _temp/scripts/md2html.py input.md output.html
 
 ### 定制投递版简历
 
-基于母版简历，根据目标公司和岗位要求定制专属版本。
+复制 Resume-Lite.md 为实例副本，按 docs/strategy.md 方案库填充定制。
 
 ### 同步更新
 
@@ -146,4 +151,4 @@ python _temp/scripts/md2html.py input.md output.html
 
 **维护者**：ILVACM
 
-**最后更新**：2025年
+**最后更新**：2026 年
