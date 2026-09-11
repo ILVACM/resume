@@ -36,7 +36,7 @@
 3. **打投递快照 tag**：`git tag v{版本}-{投递公司名称}-{YYYYMMDD}`——与投递副本文件名的版本 / 公司 / 日期三要素一致；格式与铁律见 [`tag.md`](tag.md)。
 4. **记录投递日志**：在 [`TargetCompanies.md`](TargetCompanies.md) 的投递日志追加一行（日期 / 简历文件 / 目标公司 / 对应 tag），其中「简历文件」填**投递副本文件名**、「对应 tag」填本次快照 tag（同日同公司多次投递的 `-N` 后缀规则见 [`tag.md`](tag.md)）；不覆盖旧记录。
 5. **更新状态**：公司清单中该公司的「投递简历 / 状态」列更新为最新进展（`投递中` / `一面` / `二面` / `offer` / `挂`），「投递简历」填投递副本文件名；`INDEX.md` §2 该实例的「对应 tag」列更新为**最新一次**投递的 tag。
-6. **提交落盘**：按 AGENTS.md §5.2 默认提交改动（`build(resume)` 类型，subject 含公司名与日期）；提交失败须明确上报。本次提交统一覆盖投递副本、INDEX §2 与 TargetCompanies 状态等全部关联改动。
+6. **提交落盘**：按 AGENTS.md §5.2 默认提交改动（**`docs(resume)` 类型**，subject 含公司名、日期与投递目标，如 `docs(resume): 投递 金融科技 v1.0 → 招银网络 20260910`）；提交失败须明确上报。本次提交统一覆盖投递副本、INDEX §2 与 TargetCompanies 状态等全部关联改动——**均为 md 与台账改动，不含 PDF 产物**（PDF 构建为独立可选操作，见 [`build-pdf.md`](build-pdf.md)）。
 
 > PDF 构建不属本阶段，为独立可选操作（见 build-pdf.md）。
 
