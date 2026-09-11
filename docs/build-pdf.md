@@ -14,6 +14,7 @@
 | `Resume-{目标}-{版本}-{投递公司名称}-{YYYYMMDD}[-{N}].md` | 投递副本 | 生效（≤2200） | **≤2 页** |
 
 > 豁免与页数判定均按**文件名精确匹配**（`=` 比较），实例与投递副本不会被误豁免。
+> **投递副本 PDF 非必需**：投递快照（阶段 B）只产出 md 与台账，不产 PDF；投递副本的 PDF 仅在提示词显式要求「PDF 构建」时另行构建。
 
 ## 2. 单一命令
 
@@ -36,7 +37,7 @@ bash _temp/scripts/build-pdf.sh Resume.md _output/Resume.pdf
 
 | 阶段 | 组件 | 作用 |
 |---|---|---|
-| 1/3 | `_temp/scripts/md2html.py` | 零依赖 MD→HTML，注入四层 CSS（含打印样式） |
+| 1/3 | `_temp/scripts/md2html.py` | 零依赖 MD→HTML，注入 CSS（styles/ 下 3 个 + 可选 `_temp/PDF-styles.css` + 内联 PAGE_CSS，最多 5 层；含打印样式） |
 | 2/3 | **Edge 151 headless** | `--print-to-pdf` 打印为 PDF |
 | 3/3 | `_temp/scripts/pdf-check.py` | 回归校验：页数 / Producer / 字体集 / 块引用灰底与蓝框 |
 
@@ -69,7 +70,7 @@ bash _temp/scripts/build-pdf.sh Resume.md _output/Resume.pdf
 | 行为 | 表现 |
 |---|---|
 | 超上限 | 打印 `[拦截]` → **退出码 2**（脚本内 `exit 2`）→ **不生成 PDF** |
-| 达上限 90% 以上 | 打印 `[WARN]` 预警，不拦截 |
+| **超过**上限 90%（严格大于；恰 90% 不预警） | 打印 `[WARN]` 预警，不拦截 |
 | 未超限 | 打印 `[闸门] 字数 N / 上限 M`，继续构建 |
 | 母版 / Lite | 打印 `[闸门] 已豁免：…`，跳过检查 |
 
@@ -80,10 +81,12 @@ bash _temp/scripts/build-pdf.sh Resume.md _output/Resume.pdf
 ## 6. 页数兜底（构建后）
 
 ```bash
-python _temp/scripts/pdf-check.py <file.pdf> [--max-pages N]
+"$PYTHON" -X utf8 _temp/scripts/pdf-check.py <file.pdf> [--max-pages N]
 ```
 
-- `build-pdf.sh` 对**实例与投递副本**自动追加 `--max-pages 2`（按文件名判定）；**母版与 Lite 不传**，故多页母版不会被误报。
+（$PYTHON 为脚本内硬编码的 managed Python 绝对路径，见 §4 环境前置。）
+
+- `build-pdf.sh` 对**除母版 `Resume.md` 与模板 `Resume-Lite.md` 之外的任何输入**自动追加 `--max-pages 2`（按文件名判定，**且未设 `RESUME_MAX_CHARS=0`**）；**母版与 Lite 不传**，故多页母版不会被误报。
 - 页数 > N → 输出 `[ERROR] 页数 X 超过上限 N（字数闸门可能失效，请复核字数预算）`，末行「校验失败」，**退出码 1**。
 - 该参数**仅在显式传入时判定**；不传则只做页数解析与展示。
 
@@ -98,9 +101,11 @@ python _temp/scripts/pdf-check.py <file.pdf> [--max-pages N]
 
 | 码 | 含义 | 触发点 |
 |---|---|---|
-| `0` | 通过 | 构建成功且校验通过 |
-| `1` | 前置不符 / 生成失败 / 校验失败 | 缺输入文件、缺 Edge 151、等待 30 秒 PDF 仍为空、`pdf-check` 报 `[ERROR]` |
-| `2` | **字数超限拦截** | 字数闸门（实例/投递副本） |
+| `0` | 通过 | 构建成功且 pdf-check 通过 |
+| `1` | 前置不符 / 生成失败 / 校验失败 | 参数不足、缺输入 md、缺 Edge 151、等待 30 秒 PDF 仍空、pdf-check 校验失败（含 `--max-pages` 非整数、页数解析为 0、块引用灰底/蓝框缺失） |
+| `2` | 字数超限拦截 | 字数闸门（实例／投递副本，>2200） |
+
+> 注：`wait_for_pdf` 内部 `return 1` 经主流程映射为 `exit 1`，不单独成码；pdf-check 通过返回 0。
 
 ## 9. 常见失败与既有告警
 
@@ -112,7 +117,7 @@ rm -rf _temp/build/.edge-profile    # 清理后重试
 
 **既有告警（非缺陷，校验仍通过）**：
 
-- 构建时报 `[warn] 缺少样式层: _temp/PDF-styles.css`——该层为可选覆盖，四层 CSS 中其余层已生效；
+- 构建时报 `[warn] 缺少样式层: <绝对路径>/PDF-styles.css`（脚本打印**绝对路径**）——该层为可选覆盖，其余样式层已生效；
 - 校验时报 `[WARN] 出现预期外字体: SegoeUI…`——不影响分页与块引用渲染（灰底/蓝框均正常）。
 
 ## 10. 与 strategy.md 的分工
