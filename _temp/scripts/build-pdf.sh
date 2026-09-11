@@ -106,4 +106,8 @@ fi
 echo "      -> $OUT ($(stat -c %s "$OUT") bytes)"
 
 echo "[3/3] 校验"
-"$PYTHON" -X utf8 "$(cygpath -w "$ROOT/_temp/scripts/pdf-check.py")" "$(cygpath -w "$OUT")"
+CHECK_ARGS=()
+if [ "$BASE_NAME" != "Resume.md" ] && [ "$BASE_NAME" != "Resume-Lite.md" ] && [ "$MAX_CHARS" != "0" ]; then
+  CHECK_ARGS+=(--max-pages 2)
+fi
+"$PYTHON" -X utf8 "$(cygpath -w "$ROOT/_temp/scripts/pdf-check.py")" "$(cygpath -w "$OUT")" "${CHECK_ARGS[@]}"
