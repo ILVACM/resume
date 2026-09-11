@@ -51,7 +51,7 @@ BASE="$(basename "${MD%.md}")"
 mkdir -p "$BUILD" "$PROFILE"
 
 # ---- 字数闸门：机制化保证「简历实例 PDF ≤ 2 页」----
-# 口径：去空白码点字符数 = len(''.join(text.split()))，与 docs/strategy.md 字数预算表一致。
+# 口径与阈值见 docs/build-pdf.md；阈值定义源为 docs/strategy.md 字数预算表。
 # 上限 2200 为 2026-09-11 标定实测锁定值（2239 仍为 2 页 / 2280 已为 3 页）。
 # 母版 Resume.md 与模板 Resume-Lite.md 自动豁免；RESUME_MAX_CHARS=0 表示显式关闭。
 MAX_CHARS="${RESUME_MAX_CHARS:-2200}"

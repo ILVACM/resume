@@ -14,6 +14,7 @@
 | `docs/TargetCompanies.md` | 投递目标清单（2027 秋招） | 唯一事实来源；公司增删改直接编辑本文件；含投递状态跟踪与投递日志 |
 | `docs/tag.md` | 投递 tag 规范 | tag 格式、铁律与用法的唯一权威文档；tag 台账与日志记录落 TargetCompanies |
 | `docs/strategy.md` | 简历实例定制与投递策略 | 实例构建「通用规则 + 方案库索引 + 模板」的唯一权威文档；分组方案正文拆分至 `docs/strategy/`（一方案一文件）。实例登记落 INDEX §2 |
+| `docs/build-pdf.md` | PDF 构建指引 | PDF 构建操作的唯一权威文档（独立可选操作，须显式要求）：命令与链路、环境前置、字数闸门与页数兜底、产物落点、退出码、失败处置 |
 | `docs/LOG.md` | 操作日志 | 重大操作（重命名/移动/删除/目录调整/批量修改）须登记：日期时间、操作者、操作、涉及路径、备注，人工与 Agent 均适用（细则见 §4.3） |
 
 ### 目录职责
@@ -22,7 +23,7 @@
 |---|---|---|
 | `docs/` | 原始证明材料，按 `横向/纵向/实习/竞赛/{序号}-{项目简称}/` 分类。**不删、不改、不重命名**，丢失不可再生；`其他补充描述/` 存放招聘网站填报用的额外描述素材（简历正文无对应模块）；`LOG.md` 操作日志位于本目录根（见 §4.3）。 | 全部入库 |
 | `docs/strategy/` | strategy.md 方案库的拆分存储：按分组一方案一文件（10 个 `{序号}-{组名}.md`），仅含分组方案正文；索引、加载规则、通用规则与模板仍在 `docs/strategy.md`。运行时按索引按需加载，禁止全量读取。 | 全部入库（含 `.gitkeep` 占位） |
-| `_output/` | **唯一结果输出目录**，所有 PDF 产物（母版/模板/投递件 PDF）统一存放于此。 | 忽略内容，保留 `.gitkeep` |
+| `_output/` | **唯一结果输出目录**，正式 PDF 产物（母版/模板/投递件 PDF）统一存放于此；校验用临时构建落 `_temp/build/` 并清理。 | 忽略内容，保留 `.gitkeep` |
 | `_temp/` | 中间临时产物与环境依赖；构建脚本 `scripts/` **例外入库**（其余忽略）。 | `_temp/*` 忽略，`scripts/` 例外 |
 
 `.gitignore` 规则 `/*.pdf` 为防御性保留（根目录不应再存放 PDF），勿写成 `*.pdf`（否则误伤 `docs/` 证明材料）。
@@ -92,11 +93,18 @@
 
 母版内容稳定（提交 docs(resume) 后）由 EditAgent 打基线 tag v{N}-base；内容实质修改升次；此 tag 与实例版本号相互独立，仅作母版定稿存档点。
 
-### 4.2 投递简历构建与投递
+### 4.2 简历产出操作（三项并列，均为可选）
 
-简历**实例**（非母版）的构建与投递流程统一见 [`docs/strategy.md`](docs/strategy.md)；  
-实例登记落 `docs/INDEX.md` §2；  
-投递 tag 规范见 `docs/tag.md`，台账与投递日志见 `docs/TargetCompanies.md`（母版操作走 §4.1）。
+以下三项操作**彼此独立、平级**，**均仅在提示词显式要求时执行**；体系内不存在"做了 A 就必须做 B"的关联包含关系：
+
+| 操作 | 产出 | 权威文档 |
+|---|---|---|
+| **实例构建** | 实例 md `Resume-{目标}-{版本}-base.md` | [`docs/strategy.md`](docs/strategy.md) 阶段 A |
+| **投递快照** | 投递副本 md、投递 tag、投递日志 | [`docs/strategy.md`](docs/strategy.md) 阶段 B；tag 规范见 [`docs/tag.md`](docs/tag.md)、台账见 [`docs/TargetCompanies.md`](docs/TargetCompanies.md) |
+| **PDF 构建** | 任一 md → PDF | [`docs/build-pdf.md`](docs/build-pdf.md) |
+
+- 实例登记落 [`docs/INDEX.md`](docs/INDEX.md) §2；母版内容维护走 §4.1。
+- **顺序执行 ≠ 关联包含**：Agent 可在同一任务内依次执行多项操作（如"构建实例 → 构建 PDF"），但这源于**提示词显式要求**，不得由管理体系自行推断或级联触发。
 
 ### 4.3 日志记录
 
@@ -113,11 +121,11 @@ type(scope): subject
 
 | type | 用途 | 示例 |
 |---|---|---|
-| `docs` | 简历正文内容改动 | `docs(resume): 补充省自然科学基金课题的算法职责描述` |
+| `docs` | 简历正文内容改动 | `docs(resume): 补充省自然科学基金课题的算法职责描述`；实例登记用 `docs(resume): 登记 金融科技 v1.0 实例` |
 | `data` | `docs/` 原始材料增删 | `data(横向): 归档南方电网 RPA 项目验收报告扫描件` |
 | `index` | `docs/INDEX.md` 索引台账 | `index: 新增机场物流二期项目条目及资料路径` |
 | `rule` | 规则文档与配置 | `rule: 建立 AGENTS.md 协作规则与 .gitignore 策略` |
-| `build` | 生成 PDF 产物 | `build(resume): 生成 {目标指向} v{版本} 实例 PDF`（阶段 A，如 `生成 金融科技 v1.0 实例 PDF`）；阶段 B 投递副本同用此类型、subject 含公司名与日期（如 `生成 金融科技-招银网络 20260910 投递副本 PDF`） |
+| `build` | PDF 构建操作产物 | `build(resume): 生成 {目标指向} v{版本} 实例 PDF`（PDF 构建操作，如 `生成 金融科技 v1.0 实例 PDF`）；阶段 B 投递副本同用此类型、subject 含公司名与日期（如 `生成 金融科技-招银网络 20260910 投递副本 PDF`） |
 | `chore` | 其他杂项 | `chore: 清理 _output 下过期投递件` |
 
 ### 5.2 默认提交义务
