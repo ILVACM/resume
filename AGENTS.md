@@ -25,6 +25,7 @@
 | `docs/strategy/` | strategy.md 方案库的拆分存储：按分组一方案一文件（10 个 `{序号}-{组名}.md`），仅含分组方案正文；索引、加载规则、通用规则与模板仍在 `docs/strategy.md`。运行时按索引按需加载，禁止全量读取。 | 全部入库（含 `.gitkeep` 占位） |
 | `_output/` | **唯一结果输出目录**，PDF 构建操作产出的**正式 PDF 产物**统一存放于此（构建为独立可选操作，见 `docs/build-pdf.md`）；校验用临时构建落 `_temp/build/` 并清理。 | 忽略内容，保留 `.gitkeep` |
 | `_temp/` | 中间临时产物与环境依赖；构建脚本 `scripts/` **例外入库**（其余忽略）。 | `_temp/*` 忽略，`scripts/` 例外 |
+| `_backup/` | 修改前备份：按 `{YYYYMMDD}-{主题}/` 归档改动前文件副本，供回滚与比对。 | 忽略（`.gitignore` 已含 `_backup/`） |
 
 `.gitignore` 规则 `/*.pdf` 为防御性保留（根目录不应再存放 PDF），勿写成 `*.pdf`（否则误伤 `docs/` 证明材料）。
 

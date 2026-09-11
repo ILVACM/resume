@@ -82,7 +82,7 @@
 
 ## About This Repository
 
-A **Git-based, version-controlled resume and application management system**: `Resume.md` (the master resume, single source of truth) is the content source, from which `Resume-Lite.md` (the structural template for application instances) and per-company custom instances are derived; all PDF artifacts are output to `_output/`. Customization workflow: `docs/strategy.md`; application tag convention: `docs/tag.md`; achievements and instance ledger: `docs/INDEX.md`; target company list: `docs/TargetCompanies.md`.
+A **Git-based, version-controlled resume and application management system**: `Resume.md` (the master resume, single source of truth) is the content source, from which `Resume-Lite.md` (the structural template for application instances) and per-company custom instances are derived; all PDF artifacts are output to `_output/`. Customization workflow: `docs/strategy.md`; application tag convention: `docs/tag.md`; achievements and instance ledger: `docs/INDEX.md`; target company list: `docs/TargetCompanies.md`. PDF build workflow: `docs/build-pdf.md`.
 
 ### Current Status
 
@@ -93,6 +93,7 @@ A **Git-based, version-controlled resume and application management system**: `R
 | Instance build plan library | **10 groups** established; the sample content is a first draft and **awaits manual review** before instances can be built |
 | Custom instances | **None yet** (instance ledger empty) |
 | Target companies | **203 companies / 10 groups** ready; the "Positions of Interest" column is pending |
+| Output operations | **Instance build / Application snapshot / PDF build** are peer, independent; each runs only when explicitly requested |
 
 Collaboration rules, directory responsibilities and technical details: see [`AGENTS.md`](AGENTS.md) and [`docs/`](docs/).
 
