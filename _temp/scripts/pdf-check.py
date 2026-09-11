@@ -4,7 +4,7 @@
 PDF 回归校验：页数 / Producer / 字体集合 / 块引用背景与边框
 
 用法：
-    python scripts/pdf-check.py Resume.pdf [--max-pages N]
+    python _temp/scripts/pdf-check.py Resume.pdf [--max-pages N]
 
 判据说明：
   - Producer 应为 Skia/PDF m15x（Chromium 打印引擎签名），证明走的是 Edge/Chrome 路线
@@ -33,7 +33,7 @@ def extract_streams(data):
 
 def main():
     if len(sys.argv) < 2:
-        print('用法: python scripts/pdf-check.py <file.pdf>', file=sys.stderr)
+        print('用法: python _temp/scripts/pdf-check.py <file.pdf>', file=sys.stderr)
         return 1
 
     path = sys.argv[1]

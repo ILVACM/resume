@@ -5,7 +5,7 @@
 #   bash _temp/scripts/build-pdf.sh Resume.md      Resume.pdf
 #   bash _temp/scripts/build-pdf.sh Resume-Lite.md Resume-Lite.pdf
 #
-# 链路：md2html.py（零依赖 MD->HTML，注入四层 CSS）-> Edge headless 打印 -> pdf-check.py 校验
+# 链路：md2html.py（零依赖 MD->HTML，注入多层 CSS，最多 5 层）-> Edge headless 打印 -> pdf-check.py 校验
 #
 # 注意：Edge 必须锁定版本目录的绝对路径。现有 PDF 的 Producer 是 Skia/PDF m150/m151，
 # 而系统 Edge 主程序恰为 151.0.4129.107；Chrome 是 152，跨版本会导致断行与分页漂移。
@@ -20,7 +20,7 @@ BUILD="$ROOT/_temp/build"
 PROFILE="$BUILD/.edge-profile"
 
 if [ $# -lt 2 ]; then
-  echo "用法: bash scripts/build-pdf.sh <input.md> <output.pdf>" >&2
+  echo "用法: bash _temp/scripts/build-pdf.sh <input.md> <output.pdf>" >&2
   exit 1
 fi
 
