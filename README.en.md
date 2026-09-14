@@ -25,29 +25,29 @@
 
 ### Industry–Academia Collaborative Projects
 
-**Guangzhou Power Engineering Supervision Co., Ltd. (南方电网) | Office Automation RPA Project | Core Developer | Oct 2024 - Jan 2025**
+**Guangzhou Power Engineering Supervision Co., Ltd. (南方电网) | Office Automation RPA Project | Oct 2024 - Jan 2025**
 
 - Designed a JSON-based "data-template" decoupled mapping engine: template changes require only configuration edits, no code changes; integrated heterogeneous XLS/XLSX data sources
 - Delivered and deployed: daily manual reporting cut from 1.5 hours to **under 3 minutes**, eliminating manual errors
 
-**Airport Logistics Group (机场物流集团) | Smart Logistics System Iteration (Industry-Academia Framework Agreement) | Project Lead (Phase II) / Operations (Phase I) | Sep 2024 - Sep 2026**
+**Airport Logistics Group (机场物流集团) | Smart Logistics System Iteration (Phase I/II) | Sep 2024 - Sep 2026**
 
 - Cumulative contract value **¥900K** (Phase I ¥350K / Phase II ¥550K); independently led the full lifecycle of Phase II and **11 categories** of AI vision-based violation monitoring in the transfer area (speeding, absence from post, fainting/falls, etc.)
 - Deployed models to a domestic neuromorphic edge computing box (**32 TOPS INT8**), achieving **≤200ms** single-stream latency and **≥25FPS**; built cloud-edge monitoring (Prometheus + Grafana, 15+ alert rules) with **99.5%** availability and <5 min P1 recovery
 
-**Guangdong Jiaoke Testing Co., Ltd. (广东交科) | Rebar Diameter & Spacing Inspection Device (Prototype) | Technical Lead | Sep 2025 - Sep 2026**
+**Guangdong Jiaoke Testing Co., Ltd. (广东交科) | Rebar Diameter & Spacing Inspection Device (Prototype) | Sep 2025 - Sep 2026**
 
 - Dual-node edge architecture (Jetson Nano for inference + OrangePi KunPeng for acquisition/conversion) with bidirectional gRPC (custom protobuf), isolating failure domains
 - UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype validated
 
 ### Academic Research Projects
 
-**Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Core Developer (2nd Lead of Provincial Innovation Program) | Jun 2024 - Oct 2024**
+**China Southern Power Grid Research Institute (南方电网研究院) | Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Jun 2024 - Oct 2024**
 
 - Joint research project with the China Southern Power Grid Research Institute (provincially funded), targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
 - Authored the *Image Quality Assessment & Optimization Plan* (edge-side objective pre-screening + server-side Transformer NR-IQA); YOLOv8 + ByteTrack tracking with smooth PTZ control; built the WireFO-MEF dataset achieving **70%+** edge recall/precision and **80%+** subjective-objective consistency
 
-**Guangdong Provincial Natural Science Foundation 2026 (General Program) | Core Algorithm Developer | Jun 2025 - Present**
+**Guangdong Provincial Natural Science Foundation 2026 | Lightweight Diagnostic Report Generation under Modality Missing | Jun 2025 - Present**
 
 - *Lightweight Diagnostic Report Generation under Modality Missing* (No. 2614050003331), built on a multimodal private dataset of **600+ cases** from the Sun Yat-sen University Cancer Center
 - PyTorch + RAG + Multi-Agent "diagnose-verify-arbitrate" loop; independently managed the GPU server environment and the data cleaning, de-identification and ROI-cropping pipeline; assisted in drafting the grant proposal
