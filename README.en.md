@@ -38,13 +38,13 @@
 **Guangdong Jiaoke Testing Co., Ltd. (广东交科) | Rebar Diameter & Spacing Inspection Device (Prototype) | Sep 2025 - Sep 2026**
 
 - Dual-node edge architecture (Jetson Nano for inference + OrangePi KunPeng for acquisition/conversion) with bidirectional gRPC (custom protobuf), isolating failure domains
-- UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype validated
+- UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype technical validation in progress
 
 ### Academic Research Projects
 
-**China Southern Power Grid Research Institute (南方电网研究院) | Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Jun 2024 - Oct 2024**
+**China Southern Power Grid Digital Research Institute / Jiangmen Power Supply Bureau (南网数字研究院/江门供电局) | Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Jun 2024 - Oct 2024**
 
-- Joint research project with the China Southern Power Grid Research Institute (provincially funded), targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
+- Joint research project with the China Southern Power Grid Digital Research Institute / Jiangmen Power Supply Bureau (provincially funded), targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
 - Authored the *Image Quality Assessment & Optimization Plan* (edge-side objective pre-screening + server-side Transformer NR-IQA); YOLOv8 + ByteTrack tracking with smooth PTZ control; built the WireFO-MEF dataset achieving **70%+** edge recall/precision and **80%+** subjective-objective consistency
 
 **Guangdong Provincial Natural Science Foundation 2026 | Lightweight Diagnostic Report Generation under Modality Missing | Jun 2025 - Present**
