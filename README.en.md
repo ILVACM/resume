@@ -20,6 +20,7 @@
 | AI Engineering | LangChain; hands-on delivery of RAG (retrieval-augmented generation) pipelines and Multi-Agent task orchestration; familiar with on-device deployment of computer-vision models |
 | Databases & Middleware | MySQL, PostgreSQL / TimescaleDB, Redis; vector database (Milvus) API integration; JDBC / JPA backend integration |
 | Systems & Edge Deployment | Linux / Windows; x86 / ARM cross-architecture adaptation; Docker containerized deployment; servers and high-performance edge computing devices |
+| Agent Engineering & Spec System | Independently designed and iterated a multi-agent engineering spec system (3-layer architecture constraint/knowledge/instance + AGENTS.md/.spec/ dual carrier, 27 mechanisms, anchor ↔ Git two-way binding, 7 global checks); planning its harness-ization |
 
 ## Experience Highlights
 
@@ -38,18 +39,18 @@
 **Guangdong Jiaoke Testing Co., Ltd. (广东交科) | Rebar Diameter & Spacing Inspection Device (Prototype) | Sep 2025 - Sep 2026**
 
 - Dual-node edge architecture (Jetson Nano for inference + OrangePi KunPeng for acquisition/conversion) with bidirectional gRPC (custom protobuf), isolating failure domains
-- UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype technical validation in progress
+- UNet (ResNet50) 3-class semantic segmentation + 4-channel laser ranging; pixel-to-physical conversion aligned to the 6-40mm national standard; end-to-end prototype delivered
 
 ### Academic Research Projects
 
 **China Southern Power Grid Digital Research Institute / Jiangmen Power Supply Bureau (南网数字研究院/江门供电局) | Adaptive Target Detection & PTZ Control System for Edge Surveillance Units | Jun 2024 - Oct 2024**
 
-- Joint research project with the China Southern Power Grid Digital Research Institute / Jiangmen Power Supply Bureau (provincially funded), targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
+- Joint research project with the China Southern Power Grid Digital Research Institute / Jiangmen Power Supply Bureau, later established as a provincial-level innovation program with the candidate as **technical lead**; targeting weak-network, GPU-less HiSilicon Hi3519DV500 NPU edge environments
 - Authored the *Image Quality Assessment & Optimization Plan* (edge-side objective pre-screening + server-side Transformer NR-IQA); YOLOv8 + ByteTrack tracking with smooth PTZ control; built the WireFO-MEF dataset achieving **70%+** edge recall/precision and **80%+** subjective-objective consistency
 
 **Guangdong Provincial Natural Science Foundation 2026 | Lightweight Diagnostic Report Generation under Modality Missing | Jun 2025 - Present**
 
-- *Lightweight Diagnostic Report Generation under Modality Missing* (No. 2614050003331), built on a multimodal private dataset of **600+ cases** from the Sun Yat-sen University Cancer Center
+- *Lightweight Diagnostic Report Generation under Modality Missing* (No. 2026A1515010964), built on a multimodal private dataset of **600+ cases** from the Sun Yat-sen University Cancer Center
 - PyTorch + RAG + Multi-Agent "diagnose-verify-arbitrate" loop; independently managed the GPU server environment and the data cleaning, de-identification and ROI-cropping pipeline; assisted in drafting the grant proposal
 
 ### Internships
@@ -61,9 +62,15 @@
 
 **Guangdong Provincial Institute of Land and Resources Surveying and Mapping (广东省国土资源测绘院) | System Development Intern (Satellite Application Center) | Jul 2025 - Oct 2025**
 
-- GDCORS intelligent knowledge base and government-enterprise on-premises RAG Q&A system over **3PB** of geospatial data, meeting strict "data never leaves the premises" compliance
+- GDCORS intelligent knowledge base and government-enterprise on-premises RAG Q&A system over **PB-scale** of geospatial data, meeting strict "data never leaves the premises" compliance
 - Tens of millions of document chunks stored in Milvus; HyDE + multi-route retrieval (vector + BM25) + BGE-Reranker; built an LLM-as-a-Judge evaluation system from scratch, reaching **90%+** domain Q&A accuracy
 
+### Independent Engineering Practice
+
+**Multi-Agent Engineering Spec System | Independently Designed & Iterated | Aug 2026 - Present**
+
+- Independently designed and iterated a multi-agent engineering spec system: 3-layer architecture (constraint / knowledge / instance) + `AGENTS.md`/`.spec/` dual carrier, 27 mechanisms
+- Designed task-anchor 3-tier tracing and Git commit two-way binding with 7 global checks; planned its harness-ization (5-layer separation, down-sinking criteria, CLI-contract-first)
 ## Competitions & Honors
 
 **2024**
@@ -75,8 +82,8 @@
 
 **2023**
 
-- PTA Ladder Team Programming Contest · 5th Place Nationwide among Universities (core member, University ACM Training Team)
 - GDUT "Huawei Cup" Programming Contest · Third Prize (ranked 19th on campus; admitted to the ACM Training Team)
+- PTA Ladder Team Programming Contest · 5th Place Nationwide among Universities (core member, University ACM Training Team)
 - 2023 "Holtek Cup" Microcontroller Application Design Competition · Provincial Second Prize
 - Horse Hoof Cup (Baidu Star) Programming Contest · Provincial Third Prize
 
@@ -88,7 +95,7 @@ A **Git-based, version-controlled resume and application management system**: `R
 
 | Item | Status |
 |---|---|
-| Master resume `Resume.md` | Finalized: 7 full experiences + competitions & honors; supporting materials archived under `docs/` |
+| Master resume `Resume.md` | Finalized: 8 full experiences + competitions & honors; supporting materials archived under `docs/` |
 | Template `Resume-Lite.md` | Finalized: a 27-line skeleton, with project content filled from the plan library |
 | Instance build plan library | **10 groups** established; the sample content is a first draft and **awaits manual review** before instances can be built |
 | Custom instances | **None yet** (instance ledger empty) |
