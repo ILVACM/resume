@@ -20,8 +20,8 @@
 
 ## 相关知识技能
 
-AGENT工程（ RAG/ Dify/ Harness/ vLLM/） | 常见前端后台（ Java_SpringBoot/ Python_FastAPI/） |  
-数据库（ MySQL/ PostgreSQL/ Redis/ Milvus/） | 系统部署运维（ Linux-ARM/ NPU/ Docker）
+**编程语言**：Python / C/C++ / Java / SQL / Shell ｜ **AI 工程化应用**：LangChain / RAG / Multi-Agent ｜  
+**数据库与中间件**：MySQL / PostgreSQL / Redis / Milvus ｜ **系统与边缘部署**：Linux-ARM / NPU / Docker / vLLM ｜ **Agent 工程与规约体系**：Harness 规约体系（`AGENTS.md`）/ 提示词工程
 
 ## 重要经历
 
