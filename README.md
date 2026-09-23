@@ -89,7 +89,7 @@
 
 ## 关于本仓库
 
-这是一个**基于 Git 的版本化简历与投递管理体系**：以 `Resume.md`（母版，唯一事实来源）为内容源，向下派生 `Resume-Lite.md`（投递实例的结构模板）与按目标公司定制的实例，所有 PDF 产物统一输出到 `_output/`。定制流程见 `docs/strategy.md`，投递 tag 规范见 `docs/tag.md`，成果与实例台账见 `docs/INDEX.md`，投递目标清单见 `docs/TargetCompanies.md`。PDF 构建流程见 `docs/build-pdf.md`。
+这是一个**基于 Git 的版本化简历与投递管理体系**：以 `Resume.md`（母版，唯一事实来源）为内容源，向下派生 `Resume-Lite.md`（投递实例的结构模板）与按目标公司定制的实例，所有构建产物与按分组维护的简历成品统一存放于 `resumes/`。定制流程见 `docs/strategy.md`，投递 tag 规范见 `docs/tag.md`，成果与实例台账见 `docs/INDEX.md`，投递目标清单见 `docs/TargetCompanies.md`。PDF 构建流程见 `docs/build-pdf.md`。
 
 ### 当前状态
 

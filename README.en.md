@@ -89,7 +89,7 @@
 
 ## About This Repository
 
-A **Git-based, version-controlled resume and application management system**: `Resume.md` (the master resume, single source of truth) is the content source, from which `Resume-Lite.md` (the structural template for application instances) and per-company custom instances are derived; all PDF artifacts are output to `_output/`. Customization workflow: `docs/strategy.md`; application tag convention: `docs/tag.md`; achievements and instance ledger: `docs/INDEX.md`; target company list: `docs/TargetCompanies.md`. PDF build workflow: `docs/build-pdf.md`.
+A **Git-based, version-controlled resume and application management system**: `Resume.md` (the master resume, single source of truth) is the content source, from which `Resume-Lite.md` (the structural template for application instances) and per-company custom instances are derived; all build artifacts and per-group resume deliverables are stored in `resumes/`. Customization workflow: `docs/strategy.md`; application tag convention: `docs/tag.md`; achievements and instance ledger: `docs/INDEX.md`; target company list: `docs/TargetCompanies.md`. PDF build workflow: `docs/build-pdf.md`.
 
 ### Current Status
 

@@ -26,11 +26,11 @@ bash _temp/scripts/build-pdf.sh <input.md> <output.pdf>
 
 ```bash
 # 实例
-bash _temp/scripts/build-pdf.sh Resume-金融科技-v1.0-base.md _output/Resume-金融科技-v1.0-base.pdf
+bash _temp/scripts/build-pdf.sh Resume-金融科技-v1.0-base.md resumes/Resume-金融科技-v1.0-base.pdf
 # 投递副本
-bash _temp/scripts/build-pdf.sh Resume-金融科技-v1.0-招银网络-20260910.md _output/Resume-金融科技-v1.0-招银网络-20260910.pdf
+bash _temp/scripts/build-pdf.sh Resume-金融科技-v1.0-招银网络-20260910.md resumes/Resume-金融科技-v1.0-招银网络-20260910.pdf
 # 母版（重建）
-bash _temp/scripts/build-pdf.sh Resume.md _output/Resume.pdf
+bash _temp/scripts/build-pdf.sh Resume.md resumes/Resume.pdf
 ```
 
 ## 3. 构建链路
@@ -94,7 +94,7 @@ bash _temp/scripts/build-pdf.sh Resume.md _output/Resume.pdf
 
 | 产物 | 落点 | 说明 |
 |---|---|---|
-| **正式产物**（母版 / Lite / 实例 base / 投递副本 PDF） | **`_output/`** | `AGENTS.md` §1 规定的**唯一结果输出目录** |
+| **正式产物**（母版 / Lite / 实例 base / 投递副本 PDF） | **`resumes/`** | `AGENTS.md` §1 规定的**简历成品目录** |
 | **校验用临时构建**（测试稿、页数验证稿及其 PDF/HTML） | **`_temp/build/`** | 用完**清理**：md / html / pdf 一并删除，保留 `.edge-profile` |
 
 ## 8. 退出码速查
