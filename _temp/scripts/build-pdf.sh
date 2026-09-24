@@ -52,9 +52,11 @@ mkdir -p "$BUILD" "$PROFILE"
 
 # ---- 字数闸门：机制化保证「简历实例 PDF ≤ 2 页」----
 # 口径与阈值见 docs/build-pdf.md；阈值定义源为 docs/strategy.md 字数预算表。
-# 上限 2200 为 2026-09-11 标定实测锁定值（2239 仍为 2 页 / 2280 已为 3 页）。
+# 上限默认 2700（2026-09-24 人工裁决 D-1「字数上限双轨制」）。
+#   自动构建 / PDF 链路标定值仍为 2200（2239 仍为 2 页 / 2280 已为 3 页），
+#   自 2026-09-24 起实例改由人工编辑 Word 构建（Word 2 页容量更大），故默认放宽至 2700。
 # 母版 Resume.md 与模板 Resume-Lite.md 自动豁免；RESUME_MAX_CHARS=0 表示显式关闭。
-MAX_CHARS="${RESUME_MAX_CHARS:-2200}"
+MAX_CHARS="${RESUME_MAX_CHARS:-2700}"
 BASE_NAME="$(basename "$MD")"
 if [ "$BASE_NAME" = "Resume.md" ] || [ "$BASE_NAME" = "Resume-Lite.md" ] || [ "$MAX_CHARS" = "0" ]; then
   echo "      [闸门] 已豁免：$BASE_NAME（母版/模板，或已显式关闭上限）"
@@ -65,7 +67,7 @@ else
     echo "      [WARN] 已用 $WORDS 字，达上限 90% 以上，PDF 可能逼近 2 页。" >&2
   fi
   if [ "$WORDS" -gt "$MAX_CHARS" ]; then
-    echo "      [拦截] 字数 $WORDS 超过上限 $MAX_CHARS，停止构建以防 PDF 超 2 页。" >&2
+    echo "      [拦截] 字数 $WORDS 超过上限 $MAX_CHARS，停止构建以防 PDF 超 3 页。" >&2
     echo "      请裁剪示范条目；如需临时覆盖请设 RESUME_MAX_CHARS 后重试。" >&2
     exit 2
   fi
@@ -108,6 +110,6 @@ echo "      -> $OUT ($(stat -c %s "$OUT") bytes)"
 echo "[3/3] 校验"
 CHECK_ARGS=()
 if [ "$BASE_NAME" != "Resume.md" ] && [ "$BASE_NAME" != "Resume-Lite.md" ] && [ "$MAX_CHARS" != "0" ]; then
-  CHECK_ARGS+=(--max-pages 2)
+  CHECK_ARGS+=(--max-pages 3)
 fi
 "$PYTHON" -X utf8 "$(cygpath -w "$ROOT/_temp/scripts/pdf-check.py")" "$(cygpath -w "$OUT")" "${CHECK_ARGS[@]}"
