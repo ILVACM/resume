@@ -99,7 +99,7 @@ A **Git-based, version-controlled resume and application management system**: `R
 | Template `Resume-Lite.md` | Finalized: a 27-line skeleton, with project content filled from the plan library |
 | Instance build plan library | **10 groups** established; the sample content is a first draft and **awaits manual review** before instances can be built |
 | Custom instances | **None yet** (instance ledger empty) |
-| Target companies | **203 companies / 10 groups** ready; the "Positions of Interest" column is pending |
+| Target companies | **213 companies / 10 groups** ready; the "Positions of Interest" column is pending |
 | Output operations | **Instance build / Application snapshot / PDF build** are peer, independent; each runs only when explicitly requested |
 
 Collaboration rules, directory responsibilities and technical details: see [`AGENTS.md`](AGENTS.md) and [`docs/`](docs/).
